@@ -120,8 +120,6 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
-    <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -129,53 +127,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Areas\assets\css\bootstrap.css" />
-    <Content Include="Areas\assets\css\custom.css" />
-    <Content Include="Areas\assets\css\font-icons\entypo\css\entypo.css" />
-    <Content Include="Areas\assets\css\font-icons\glyphicons\glyphicons-halflings-regular.svg" />
-    <Content Include="Areas\assets\css\neon-core.css" />
-    <Content Include="Areas\assets\css\neon-forms.css" />
-    <Content Include="Areas\assets\css\neon-theme.css" />
-    <Content Include="Areas\assets\images\boxed-pattern-3.png" />
-    <Content Include="Areas\assets\images\colorpicker\alpha-horizontal.png" />
-    <Content Include="Areas\assets\images\colorpicker\alpha.png" />
-    <Content Include="Areas\assets\images\colorpicker\hue-horizontal.png" />
-    <Content Include="Areas\assets\images\colorpicker\hue.png" />
-    <Content Include="Areas\assets\images\colorpicker\saturation.png" />
-    <Content Include="Areas\assets\images\flags\flag-al.png" />
-    <Content Include="Areas\assets\images\flags\flag-de.png" />
-    <Content Include="Areas\assets\images\flags\flag-es.png" />
-    <Content Include="Areas\assets\images\flags\flag-fr.png" />
-    <Content Include="Areas\assets\images\flags\flag-uk.png" />
-    <Content Include="Areas\assets\images\loader-1.gif" />
-    <Content Include="Areas\assets\images\loader-2.gif" />
-    <Content Include="Areas\assets\images\logo%402x.png" />
-    <Content Include="Areas\assets\images\notes-lines.png" />
-    <Content Include="Areas\assets\images\thumb-1%402x.png" />
-    <Content Include="Areas\assets\images\thumb-2%402x.png" />
-    <Content Include="Areas\assets\images\thumb-3%402x.png" />
-    <Content Include="Areas\assets\images\thumb-4%402x.png" />
-    <Content Include="Areas\assets\js\bootstrap.js" />
-    <Content Include="Areas\assets\js\cookies.min.js" />
-    <Content Include="Areas\assets\js\gsap\TweenMax.min.js" />
-    <Content Include="Areas\assets\js\joinable.js" />
-    <Content Include="Areas\assets\js\jquery-1.11.3.min.js" />
-    <Content Include="Areas\assets\js\jquery-ui\css\no-theme\jquery-ui-1.10.3.custom.min.css" />
-    <Content Include="Areas\assets\js\jquery-ui\js\jquery-ui-1.10.3.minimal.min.js" />
-    <Content Include="Areas\assets\js\jquery.peity.min.js" />
-    <Content Include="Areas\assets\js\jquery.sparkline.min.js" />
-    <Content Include="Areas\assets\js\morris.min.js" />
-    <Content Include="Areas\assets\js\neon-api.js" />
-    <Content Include="Areas\assets\js\neon-charts.js" />
-    <Content Include="Areas\assets\js\neon-chat.js" />
-    <Content Include="Areas\assets\js\neon-custom.js" />
-    <Content Include="Areas\assets\js\neon-demo.js" />
-    <Content Include="Areas\assets\js\neon-skins.js" />
-    <Content Include="Areas\assets\js\raphael-min.js" />
-    <Content Include="Areas\assets\js\resizeable.js" />
-    <Content Include="Areas\assets\js\rickshaw\rickshaw.min.css" />
-    <Content Include="Areas\assets\js\rickshaw\rickshaw.min.js" />
-    <Content Include="Areas\assets\js\rickshaw\vendor\d3.v3.js" />
     <Content Include="assets\css\fonts\fa-brands-400.svg" />
     <Content Include="assets\css\fonts\fa-regular-400.svg" />
     <Content Include="assets\css\fonts\fa-solid-900.svg" />
@@ -397,14 +348,6 @@
     <Content Include="assets\css\fonts\themify9f24.ttf" />
     <Content Include="assets\css\fonts\themify9f24.woff" />
     <Content Include="assets\css\fonts\themifyd41d.eot" />
-    <Content Include="Areas\Admin\Views\web.config" />
-    <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
-    <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
-    <Content Include="Areas\assets\css\font-icons\glyphicons\glyphicons-halflings-regular.eot" />
-    <Content Include="Areas\assets\css\font-icons\glyphicons\glyphicons-halflings-regular.ttf" />
-    <Content Include="Areas\assets\css\font-icons\glyphicons\glyphicons-halflings-regular.woff" />
-    <Content Include="Areas\assets\css\font-icons\glyphicons\glyphicons-halflings-regular.woff2" />
-    <Content Include="Areas\assets\css\font-icons\glyphicons\glyphicons-halflings-regulard41d.eot" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -433,7 +376,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
