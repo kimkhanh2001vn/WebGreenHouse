@@ -1,0 +1,35 @@
+﻿@using WebGreenhouse.Common
+
+@{ foreach (var item in Model)
+    {
+        <div class="col-lg-3 col-md-4 col-sm-12">
+            <div class="property_dashboard_navbar">
+
+                <div class="dash_user_avater">
+                    <img src="~/assets/img/user-3.jpg" class="img-fluid avater" alt="">
+                    <h4>@item.CustomerName</h4>
+                    Công Việc : <span>@item.CustomerWork</span>
+                </div>
+
+                <div class="dash_user_menues">
+                    <ul>
+                        <li><a href="/profile/profile/@Session[CommonStants.ID_Customer]"><i class="fa fa-user-tie"></i>Thông Tin</a></li>
+                        <li><a href="bookmark-list.html"><i class="fa fa-bookmark"></i>Lưu Bài Đăng<span class="notti_coun style-2">7</span></a></li>
+                        <li class="active"><a href="/profile/historyorder/@Session[CommonStants.ID_Customer]"><i class="fa fa-tasks"></i>Đơn Hàng Đang Chờ <span class="notti_coun style-3">3</span></a></li>
+                        <li><a href="messages.html"><i class="fa fa-envelope"></i>Tin Nhắn<span class="notti_coun style-3">3</span></a></li>
+                        <li><a href="/Profile/ChangePassword/@Session["ID"]"><i class="fa fa-unlock-alt"></i>Thay Đổi Mật Khẩu</a></li>
+                    </ul>
+                </div>
+
+                <div class="dash_user_footer">
+                    <ul>
+                        <li><a href="/home/logout"><i class="fa fa-power-off"></i></a></li>
+                        <li><a href="#"><i class="fa fa-comment"></i></a></li>
+                        <li><a href="/profile/Edit/"><i class="fa fa-cog"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    }
+}
+

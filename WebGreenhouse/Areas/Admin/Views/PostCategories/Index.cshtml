@@ -1,0 +1,127 @@
+﻿@model IEnumerable<Model.EF.PostCategory>
+@using PagedList.Mvc;
+@using Model.EF
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+    var list = (PagedList.PagedList<PostCategory>)ViewBag.model;
+}
+<link href="~/assets/css/TableTheme.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+<html>
+<body>
+    <div class="preloader"></div>
+    <div class="bootstrap snippets bootdey" style="padding:40px">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="main-box no-header clearfix">
+                    <div class="main-box-body clearfix">
+                        <div class="row">
+                            <div class="label col-lg-4" style="margin-bottom:15px">
+                                <a href="~/Admin/PostCategories/create" class="btn btn-danger">Tạo Mới</a>
+                            </div>
+                            <div class="col-lg-8">
+                                <form action="~/admin/PostCategories/index" method="get">
+                                    <div class="input-group">
+                                        <input type="search" placeholder="Nhập từ bạn cần tìm?" aria-describedby="button-addon1" name="searchString" class="form-control border-0 bg-light">
+                                        <div class="input-group-append">
+                                            <button id="button-addon1" type="submit" class="btn btn-link text-primary"><i class="fa fa-search"></i></button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tr>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.NameCate)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Alias)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.StoreID)
+                                    </th>
+
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.ParentID)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.DisplayOrder)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.FontSize)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Status)
+                                    </th>
+                                    <th></th>
+                                </tr>
+
+                                @foreach (var item in list)
+                                {
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.NameCate)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Alias)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.StoreID)
+                                        </td>
+
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.ParentID)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.DisplayOrder)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.FontSize)
+                                        </td>
+                                        <td>
+                                            @if (item.Status == true)
+                                            {
+                                                <p class="label label-success">Kích Hoạt</p>
+                                            }
+                                            else
+                                            {
+                                                <p class="label label-danger">Khóa</p>
+                                            }
+                                        </td>
+                                        <td>
+                                            <a href="@Url.Action("Edit","PostCategories",new { id = item.ID})"><i class="fa fa-edit"></i></a>
+                                            <a href="@Url.Action("Details","PostCategories",new { id = item.ID})"><i class="fa fa-sliders-h"></i></a>
+                                            <a href="@Url.Action("Delete","PostCategories",new { id = item.ID})"><i class="fa fa-times-circle"></i></a>
+                                        </td>
+                                    </tr>
+                                }
+
+                            </table>
+                            <div class="number">
+                                Trang @(list.PageCount<list.PageNumber?0:list.PageNumber) of @list.PageCount
+                            </div>
+                            <div class="menutrang">
+                                @Html.PagedListPager(list, page => Url.Action("Index", new { page = page }))
+                            </div>
+                            <style>
+                                .menutrang {
+                                    display: inline;
+                                    text-align: center;
+                                    padding: 0 5px 0 5px;
+                                }
+
+                                .number {
+                                    padding-left: 8px;
+                                }
+                            </style>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

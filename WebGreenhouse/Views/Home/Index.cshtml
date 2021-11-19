@@ -1,22 +1,21 @@
-﻿@{
-    ViewBag.Title = "Home Page";
+﻿@using Model.EF
+@{
+    ViewBag.Title = "GreenHouse - Bất Động Sản";
     Layout = "~/Views/Shared/_Layout.cshtml";
+    var sellnew = (List<Model.EF.Post>)ViewBag.SellNew;
+    var user = (List<Model.EF.User>)ViewBag.user;
+    var db = new GreenHouseDB();
 }
- 
-
 <body class="yellow-skin">
-
+    <div class="preloader"></div>
     <div id="main-wrapper">
         <div class="clearfix"></div>
-        <!-- ============================================================== -->
-        <!-- Top header  -->
-        <!-- ============================================================== -->
         <!-- ============================ Hero Banner  Start================================== -->
         <div class="image-cover hero_banner" style="background:url(/assets/img/banner-3.png) no-repeat;" data-overlay="0">
             <div class="container">
 
-                <h1 class="big-header-capt mb-0">Search Your Next Home</h1>
-                <p class="text-center mb-4">Find new & featured property located in your local city.</p>
+                <h1 class="big-header-capt mb-0">Tìm Nhà CHo Riêng Bạn</h1>
+                <p class="text-center mb-4">Tìm Kiếm & Địa Phương Theo Yêu Cầu.</p>
                 <!-- Type -->
                 <div class="row justify-content-center">
                     <div class="col-xl-10 col-lg-12 col-md-12">
@@ -26,7 +25,7 @@
                                 <div class="row">
                                     <div class="col-lg-3 col-md-3 col-sm-12">
                                         <div class="form-group">
-                                            <label>City/Street</label>
+                                            <label>Thành Phố/Đường</label>
                                             <div class="input-with-icon">
                                                 <select id="location" class="form-control">
                                                     <option value="">&nbsp;</option>
@@ -43,7 +42,7 @@
 
                                     <div class="col-lg-3 col-md-4 col-sm-12">
                                         <div class="form-group">
-                                            <label>Property Type</label>
+                                            <label>Loại Bất Động Sản</label>
                                             <div class="input-with-icon">
                                                 <select id="ptypes" class="form-control">
                                                     <option value="">&nbsp;</option>
@@ -60,7 +59,7 @@
 
                                     <div class="col-lg-3 col-sm-12 d-md-none d-lg-block">
                                         <div class="form-group">
-                                            <label>Price Range</label>
+                                            <label>Giá Thành</label>
                                             <div class="input-with-icon">
                                                 <select id="price" class="form-control">
                                                     <option value="">&nbsp;</option>
@@ -76,7 +75,7 @@
 
                                     <div class="col-lg-2 col-md-3 col-sm-12">
                                         <div class="form-group none">
-                                            <a class="collapsed ad-search" data-toggle="collapse" data-parent="#search" data-target="#advance-search" href="javascript:void(0);" aria-expanded="false" aria-controls="advance-search"><i class="fa fa-sliders-h mr-2"></i>Advance Filter</a>
+                                            <a class="collapsed ad-search" data-toggle="collapse" data-parent="#search" data-target="#advance-search" href="javascript:void(0);" aria-expanded="false" aria-controls="advance-search"><i class="fa fa-sliders-h mr-2"></i>Lựa Chọn Khác</a>
                                         </div>
                                     </div>
 
@@ -130,7 +129,6 @@
                                                 <input type="text" class="form-control" placeholder="max sqft" />
                                             </div>
                                         </div>
-
                                     </div>
                                     <!-- /row -->
                                     <!-- row -->
@@ -199,15 +197,11 @@
                                                 </li>
                                             </ul>
                                         </div>
-
                                     </div>
                                     <!-- /row -->
-
                                 </div>
-
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -220,8 +214,8 @@
                 <div class="row">
                     <div class="col-lg-12 col-md-12">
                         <div class="sec-heading center">
-                            <h2>Featured Property Types</h2>
-                            <p>Find All Type of Property.</p>
+                            <h2>Loại Bất Động Sản</h2>
+                            <p>Tìm Nhanh Ở Đây.</p>
                         </div>
                     </div>
                 </div>
@@ -238,8 +232,8 @@
                                     </div>
 
                                     <div class="property_category_expand property_category_short-text">
-                                        <h4>Family House</h4>
-                                        <p>122 Property</p>
+                                        <h4>Đất & Mặt Bằng</h4>
+                                        <p>122 Căn</p>
                                     </div>
                                 </div>
                             </a>
@@ -256,8 +250,8 @@
                                     </div>
 
                                     <div class="property_category_expand property_category_short-text">
-                                        <h4>House & Villa</h4>
-                                        <p>155 Property</p>
+                                        <h4>Nhà & Villa</h4>
+                                        <p>155 Căn</p>
                                     </div>
                                 </div>
                             </a>
@@ -274,8 +268,8 @@
                                     </div>
 
                                     <div class="property_category_expand property_category_short-text">
-                                        <h4>Apartment</h4>
-                                        <p>300 Property</p>
+                                        <h4>Chung Cư</h4>
+                                        <p>300 Căn</p>
                                     </div>
                                 </div>
                             </a>
@@ -292,8 +286,8 @@
                                     </div>
 
                                     <div class="property_category_expand property_category_short-text">
-                                        <h4>Office & Studio</h4>
-                                        <p>80 Property</p>
+                                        <h4>Văn Phòng</h4>
+                                        <p>80 Căn</p>
                                     </div>
                                 </div>
                             </a>
@@ -310,14 +304,13 @@
                                     </div>
 
                                     <div class="property_category_expand property_category_short-text">
-                                        <h4>Villa & Condo</h4>
-                                        <p>80 Property</p>
+                                        <h4>Nhà Xưởng</h4>
+                                        <p>80 Căn</p>
                                     </div>
                                 </div>
                             </a>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
@@ -330,261 +323,65 @@
                     <div class="col-lg-7 col-md-8">
                         <div class="sec-heading center">
                             <h2>Nhà Đất Mới Nhất</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                            <p>Nhà đất mới nhất của chúng tôi được đăng bán ở đây.</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="row justify-content-center">
+                    @{ foreach (var sell in sellnew)
+                        {
+                            <!-- Single Property -->
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="property-listing property-2">
 
-                    <!-- Single Property -->
-                    <div class="col-lg-4 col-md-6 col-sm-12">
-                        <div class="property-listing property-2">
-
-                            <div class="listing-img-wrapper">
-                                <div class="list-img-slide">
-                                    <a href="single-property-1.html"><img src="~/assets/img/p-1.png" class="img-fluid mx-auto" alt="" /></a>
-                                </div>
-                            </div>
-
-                            <div class="listing-detail-wrapper">
-                                <div class="listing-short-detail-wrap">
-                                    <div class="_card_list_flex mb-2">
-                                        <div class="_card_flex_01">
-                                            <span class="property-type elt_rent">For Rent</span>
+                                    <div class="listing-img-wrapper">
+                                        <div class="list-img-slide">
+                                            <a href="single-property-1.html"><img src="~/assets/img/p-1.png" class="img-fluid mx-auto" alt="" /></a>
                                         </div>
-                                        <div class="_card_flex_last">
-                                            <div class="prt_saveed_12lk">
-                                                <label class="toggler toggler-danger"><input type="checkbox"><i class="fas fa-heart"></i></label>
+                                    </div>
+
+                                    <div class="listing-detail-wrapper">
+                                        <div class="listing-short-detail-wrap">
+                                            <div class="_card_list_flex mb-2">
+                                                <div class="_card_flex_01">
+                                                    <span class="property-type elt_rent">For Rent</span>
+                                                </div>
+                                                <div class="_card_flex_last">
+                                                    <div class="prt_saveed_12lk">
+                                                        <label class="toggler toggler-danger"><input type="checkbox"><i class="fas fa-heart"></i></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="listing-short-detail">
+                                                <h4 class="listing-name verified"><a href="/home/details/@sell.ID" class="prt-link-detail">@sell.Name</a></h4>
+                                                <div class="foot-location"><img src="~/assets/img/pin.svg" width="18" alt="" />@sell.Address</div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="listing-short-detail">
-                                        <h4 class="listing-name verified"><a href="single-property-1.html" class="prt-link-detail">Red Carpet Real Estate</a></h4>
-                                        <div class="foot-location"><img src="~/assets/img/pin.svg" width="18" alt="" />210 Zirak Road, Canada</div>
+
+                                    <div class="listing-detail-footer">
+                                        <div class="footer-first">
+                                            <div class="foot-location"><span class="pric_lio theme-bg">@Html.FormatValue(sell.Price, "{0:#,##0}") </span>VNĐ</div>
+                                        </div>
+                                        <div class="footer-flex">
+                                            @if (sell.HomeFlag == true)
+                                            {
+                                                <span>Đang Bán</span>
+                                            }
+                                            else
+                                            {
+                                                <span>Cho Thuê</span>
+                                            }
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="listing-detail-footer">
-                                <div class="footer-first">
-                                    <div class="foot-location"><span class="pric_lio theme-bg">$3,700</span>/sqft</div>
-                                </div>
-                                <div class="footer-flex">
-                                    <span>Apartment</span>
-                                </div>
-                            </div>
-
-                        </div>
+                        }
+                    }
+                    <div>
                     </div>
-
-                    <!-- Single Property -->
-                    <div class="col-lg-4 col-md-6 col-sm-12">
-                        <div class="property-listing property-2">
-
-                            <div class="listing-img-wrapper">
-                                <div class="list-img-slide">
-                                    <a href="single-property-1.html"><img src="~/assets/img/p-2.png" class="img-fluid mx-auto" alt="" /></a>
-                                </div>
-                            </div>
-
-                            <div class="listing-detail-wrapper">
-                                <div class="listing-short-detail-wrap">
-                                    <div class="_card_list_flex mb-2">
-                                        <div class="_card_flex_01">
-                                            <span class="property-type elt_sale">For Sale</span>
-                                        </div>
-                                        <div class="_card_flex_last">
-                                            <div class="prt_saveed_12lk">
-                                                <label class="toggler toggler-danger"><input type="checkbox"><i class="fas fa-heart"></i></label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="listing-short-detail">
-                                        <h4 class="listing-name verified"><a href="single-property-1.html" class="prt-link-detail">Fairmount Properties</a></h4>
-                                        <div class="foot-location"><img src="~/assets/img/pin.svg" width="18" alt="" />5698 Zirak Road, NewYork</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="listing-detail-footer">
-                                <div class="footer-first">
-                                    <div class="foot-location"><span class="pric_lio theme-bg">$9,750</span>/sqft</div>
-                                </div>
-                                <div class="footer-flex">
-                                    <span>Condos</span>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <!-- Single Property -->
-                    <div class="col-lg-4 col-md-6 col-sm-12">
-                        <div class="property-listing property-2">
-
-                            <div class="listing-img-wrapper">
-                                <div class="list-img-slide">
-                                    <a href="single-property-1.html"><img src="~/assets/img/p-4.png" class="img-fluid mx-auto" alt="" /></a>
-                                </div>
-                            </div>
-
-                            <div class="listing-detail-wrapper">
-                                <div class="listing-short-detail-wrap">
-                                    <div class="_card_list_flex mb-2">
-                                        <div class="_card_flex_01">
-                                            <span class="property-type elt_rent">For Rent</span>
-                                        </div>
-                                        <div class="_card_flex_last">
-                                            <div class="prt_saveed_12lk">
-                                                <label class="toggler toggler-danger"><input type="checkbox"><i class="fas fa-heart"></i></label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="listing-short-detail">
-                                        <h4 class="listing-name verified"><a href="single-property-1.html" class="prt-link-detail">The Real Estate Corner</a></h4>
-                                        <div class="foot-location"><img src="~/assets/img/pin.svg" width="18" alt="" />5624 Mooker Market, USA</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="listing-detail-footer">
-                                <div class="footer-first">
-                                    <div class="foot-location"><span class="pric_lio theme-bg">$5,860</span>/sqft</div>
-                                </div>
-                                <div class="footer-flex">
-                                    <span>Offices</span>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <!-- Single Property -->
-                    <div class="col-lg-4 col-md-6 col-sm-12">
-                        <div class="property-listing property-2">
-
-                            <div class="listing-img-wrapper">
-                                <div class="list-img-slide">
-                                    <a href="single-property-1.html"><img src="~/assets/img/p-5.png" class="img-fluid mx-auto" alt="" /></a>
-                                </div>
-                            </div>
-
-                            <div class="listing-detail-wrapper">
-                                <div class="listing-short-detail-wrap">
-                                    <div class="_card_list_flex mb-2">
-                                        <div class="_card_flex_01">
-                                            <span class="property-type elt_sale">For Sale</span>
-                                        </div>
-                                        <div class="_card_flex_last">
-                                            <div class="prt_saveed_12lk">
-                                                <label class="toggler toggler-danger"><input type="checkbox"><i class="fas fa-heart"></i></label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="listing-short-detail">
-                                        <h4 class="listing-name verified"><a href="single-property-1.html" class="prt-link-detail">Herringbone Realty</a></h4>
-                                        <div class="foot-location"><img src="~/assets/img/pin.svg" width="18" alt="" />5621 Liverpool, London</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="listing-detail-footer">
-                                <div class="footer-first">
-                                    <div class="foot-location"><span class="pric_lio theme-bg">$7,540</span>/sqft</div>
-                                </div>
-                                <div class="footer-flex">
-                                    <span>Homes & Villas</span>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <!-- Single Property -->
-                    <div class="col-lg-4 col-md-6 col-sm-12">
-                        <div class="property-listing property-2">
-
-                            <div class="listing-img-wrapper">
-                                <div class="list-img-slide">
-                                    <a href="single-property-1.html"><img src="~/assets/img/p-6.png" class="img-fluid mx-auto" alt="" /></a>
-                                </div>
-                            </div>
-
-                            <div class="listing-detail-wrapper">
-                                <div class="listing-short-detail-wrap">
-                                    <div class="_card_list_flex mb-2">
-                                        <div class="_card_flex_01">
-                                            <span class="property-type elt_rent">For Rent</span>
-                                        </div>
-                                        <div class="_card_flex_last">
-                                            <div class="prt_saveed_12lk">
-                                                <label class="toggler toggler-danger"><input type="checkbox"><i class="fas fa-heart"></i></label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="listing-short-detail">
-                                        <h4 class="listing-name verified"><a href="single-property-1.html" class="prt-link-detail">Brick Lane Realty</a></h4>
-                                        <div class="foot-location"><img src="~/assets/img/pin.svg" width="18" alt="" />210 Montreal Road, Canada</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="listing-detail-footer">
-                                <div class="footer-first">
-                                    <div class="foot-location"><span class="pric_lio theme-bg">$4,850</span>/sqft</div>
-                                </div>
-                                <div class="footer-flex">
-                                    <span>Commercial</span>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <!-- Single Property -->
-                    <div class="col-lg-4 col-md-6 col-sm-12">
-                        <div class="property-listing property-2">
-
-                            <div class="listing-img-wrapper">
-                                <div class="list-img-slide">
-                                    <a href="single-property-1.html"><img src="~/assets/img/p-7.png" class="img-fluid mx-auto" alt="" /></a>
-                                </div>
-                            </div>
-
-                            <div class="listing-detail-wrapper">
-                                <div class="listing-short-detail-wrap">
-                                    <div class="_card_list_flex mb-2">
-                                        <div class="_card_flex_01">
-                                            <span class="property-type elt_sale">For Sale</span>
-                                        </div>
-                                        <div class="_card_flex_last">
-                                            <div class="prt_saveed_12lk">
-                                                <label class="toggler toggler-danger"><input type="checkbox"><i class="fas fa-heart"></i></label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="listing-short-detail">
-                                        <h4 class="listing-name verified"><a href="single-property-1.html" class="prt-link-detail">Banyon Tree Realty</a></h4>
-                                        <div class="foot-location"><img src="~/assets/img/pin.svg" width="18" alt="" />210 Zirak Road, Canada</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="listing-detail-footer">
-                                <div class="footer-first">
-                                    <div class="foot-location"><span class="pric_lio theme-bg">$2,742</span>/sqft</div>
-                                </div>
-                                <div class="footer-flex">
-                                    <span>Apartment</span>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
                 </div>
-
             </div>
         </section>
         <!-- ============================ Property End ================================== -->
@@ -595,8 +392,19 @@
                 <div class="row justify-content-center">
                     <div class="col-xl-7 col-lg-10 col-md-12 col-sm-12">
                         <div class="text-center mb-5">
-                            <span class="theme-cl">Our Awards</span>
-                            <h2 class="font-weight-normal text-light">Over 1,24,000+ Happy User Bieng with us Still they Love Our Services</h2>
+                            <span class="theme-cl">Thông Tin Sơ Lược Về Công Ty Chúng Tôi</span>
+                            @if (db.Customers.Count() > 30000)
+                            {
+                                <h2 class="font-weight-normal text-light">
+                                    Hơn 30000 + Người dùng an tâm với chúng tôi Họ vẫn yêu thích dịch vụ của chúng tôi
+                                </h2>
+                            }
+                            else
+                            {
+                                <h2 class="font-weight-normal text-light">
+                                    Hơn @db.Customers.Count() + Người dùng an tâm với chúng tôi Họ vẫn yêu thích dịch vụ của chúng tôi
+                                </h2>
+                            }
                         </div>
                     </div>
                 </div>
@@ -639,7 +447,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
         <!-- ============================ Our Counter End ================================== -->
@@ -650,8 +457,8 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-7 col-md-8">
                         <div class="sec-heading center">
-                            <h2>Explore By Location</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                            <h2>Dự Án Mới</h2>
+                            <p>Hơn @db.Customers.Count()+ Người dùng hạnh phúc đến với chúng tôi Họ vẫn yêu thích dịch vụ của chúng tôi.</p>
                         </div>
                     </div>
                 </div>
@@ -759,9 +566,7 @@
                             <div class="img-wrap-background" style="background-image: url(/assets/img/city-6.png);"></div>
                         </a>
                     </div>
-
                 </div>
-
             </div>
         </section>
         <!-- ============================ Property Location End ================================== -->
@@ -773,7 +578,7 @@
                     <div class="col-lg-7 col-md-8">
                         <div class="sec-heading center">
                             <h2>Mô Giới Nổi Bật</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                            <p>Các Nhân Viên Ưu Tú Nhất Của Công Ty Chúng Tôi Liên hệ Ngay Để Cho Được Sự Uy Tín Nhất.</p>
                         </div>
                     </div>
                 </div>
@@ -781,300 +586,45 @@
                 <div class="row">
                     <div class="col-lg-12 col-md-12">
                         <div class="item-slide space">
+                            @{ foreach (var item in user)
+                                {
+                                    <div class="single_items">
+                                        <div class="grid_agents">
+                                            <div class="elio_mx_list theme-bg-2">@item.MyWork</div>
+                                            <div class="grid_agents-wrap">
 
-                            <!-- Single Item -->
-                            <div class="single_items">
-                                <div class="grid_agents">
-                                    <div class="elio_mx_list theme-bg-2">102 Listings</div>
-                                    <div class="grid_agents-wrap">
+                                                <div class="fr-grid-thumb">
+                                                    <a href="agent-page.html">
+                                                        <span class="verified"><img src="~/assets/img/verified.svg" class="verify mx-auto" alt=""></span>
+                                                        <img src="~/assets/img/team-1.jpg" class="img-fluid mx-auto" alt="">
+                                                    </a>
+                                                </div>
 
-                                        <div class="fr-grid-thumb">
-                                            <a href="agent-page.html">
-                                                <span class="verified"><img src="~/assets/img/verified.svg" class="verify mx-auto" alt=""></span>
-                                                <img src="~/assets/img/team-1.jpg" class="img-fluid mx-auto" alt="">
-                                            </a>
+                                                <div class="fr-grid-deatil">
+                                                    <span><i class="ti-location-pin mr-1"></i>Việt Nam</span>
+                                                    <h5 class="fr-can-name"><a href="agent-page.html"> @item.Name</a></h5>
+                                                    <ul class="inline_social">
+                                                        <li><a href="#" class="fb"><i class="ti-facebook"></i></a></li>
+                                                        <li><a href="#" class="ln"><i class="ti-linkedin"></i></a></li>
+                                                        <li><a href="#" class="ins"><i class="ti-instagram"></i></a></li>
+                                                        <li><a href="#" class="tw"><i class="ti-twitter"></i></a></li>
+                                                    </ul>
+                                                </div>
+
+                                                <div class="fr-infos-deatil">
+                                                    <a href="#" data-toggle="modal" data-target="#autho-message" class="btn agent-btn theme-bg"><i class="fa fa-envelope mr-2"></i>Message</a>
+                                                    <a href="#" class="btn agent-btn theme-black"><i class="fa fa-phone"></i></a>
+                                                </div>
+                                            </div>
                                         </div>
-
-                                        <div class="fr-grid-deatil">
-                                            <span><i class="ti-location-pin mr-1"></i>Montreal, USA</span>
-                                            <h5 class="fr-can-name"><a href="agent-page.html">Adam K. Jollio</a></h5>
-                                            <ul class="inline_social">
-                                                <li><a href="#" class="fb"><i class="ti-facebook"></i></a></li>
-                                                <li><a href="#" class="ln"><i class="ti-linkedin"></i></a></li>
-                                                <li><a href="#" class="ins"><i class="ti-instagram"></i></a></li>
-                                                <li><a href="#" class="tw"><i class="ti-twitter"></i></a></li>
-                                            </ul>
-                                        </div>
-
-                                        <div class="fr-infos-deatil">
-                                            <a href="#" data-toggle="modal" data-target="#autho-message" class="btn agent-btn theme-bg"><i class="fa fa-envelope mr-2"></i>Message</a>
-                                            <a href="#" class="btn agent-btn theme-black"><i class="fa fa-phone"></i></a>
-                                        </div>
-
                                     </div>
+                                }
 
-                                </div>
-                            </div>
-
-                            <!-- Single Item -->
-                            <div class="single_items">
-                                <div class="grid_agents">
-                                    <div class="elio_mx_list theme-bg-2">72 Listings</div>
-                                    <div class="grid_agents-wrap">
-
-                                        <div class="fr-grid-thumb">
-                                            <a href="agent-page.html">
-                                                <span class="verified"><img src="~/assets/img/verified.svg" class="verify mx-auto" alt=""></span>
-                                                <img src="~/assets/img/team-2.jpg" class="img-fluid mx-auto" alt="">
-                                            </a>
-                                        </div>
-
-                                        <div class="fr-grid-deatil">
-                                            <span><i class="ti-location-pin mr-1"></i>Liverpool, Canada</span>
-                                            <h5 class="fr-can-name"><a href="agent-page.html">Sargam S. Singh</a></h5>
-                                            <ul class="inline_social">
-                                                <li><a href="#" class="fb"><i class="ti-facebook"></i></a></li>
-                                                <li><a href="#" class="ln"><i class="ti-linkedin"></i></a></li>
-                                                <li><a href="#" class="ins"><i class="ti-instagram"></i></a></li>
-                                                <li><a href="#" class="tw"><i class="ti-twitter"></i></a></li>
-                                            </ul>
-                                        </div>
-
-                                        <div class="fr-infos-deatil">
-                                            <a href="#" data-toggle="modal" data-target="#autho-message" class="btn agent-btn theme-bg"><i class="fa fa-envelope mr-2"></i>Message</a>
-                                            <a href="#" class="btn agent-btn theme-black"><i class="fa fa-phone"></i></a>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <!-- Single Item -->
-                            <div class="single_items">
-                                <div class="grid_agents">
-                                    <div class="elio_mx_list theme-bg-2">22 Listings</div>
-                                    <div class="grid_agents-wrap">
-
-                                        <div class="fr-grid-thumb">
-                                            <a href="agent-page.html">
-                                                <span class="verified"><img src="~/assets/img/verified.svg" class="verify mx-auto" alt=""></span>
-                                                <img src="~/assets/img/team-3.jpg" class="img-fluid mx-auto" alt="">
-                                            </a>
-                                        </div>
-
-                                        <div class="fr-grid-deatil">
-                                            <span><i class="ti-location-pin mr-1"></i>Montreal, Canada</span>
-                                            <h5 class="fr-can-name"><a href="agent-page.html">Harijeet M. Siller</a></h5>
-                                            <ul class="inline_social">
-                                                <li><a href="#" class="fb"><i class="ti-facebook"></i></a></li>
-                                                <li><a href="#" class="ln"><i class="ti-linkedin"></i></a></li>
-                                                <li><a href="#" class="ins"><i class="ti-instagram"></i></a></li>
-                                                <li><a href="#" class="tw"><i class="ti-twitter"></i></a></li>
-                                            </ul>
-                                        </div>
-
-                                        <div class="fr-infos-deatil">
-                                            <a href="#" data-toggle="modal" data-target="#autho-message" class="btn agent-btn theme-bg"><i class="fa fa-envelope mr-2"></i>Message</a>
-                                            <a href="#" class="btn agent-btn theme-black"><i class="fa fa-phone"></i></a>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <!-- Single Item -->
-                            <div class="single_items">
-                                <div class="grid_agents">
-                                    <div class="elio_mx_list theme-bg-2">50 Listings</div>
-                                    <div class="grid_agents-wrap">
-
-                                        <div class="fr-grid-thumb">
-                                            <a href="agent-page.html">
-                                                <span class="verified"><img src="~/assets/img/verified.svg" class="verify mx-auto" alt=""></span>
-                                                <img src="~/assets/img/team-4.jpg" class="img-fluid mx-auto" alt="">
-                                            </a>
-                                        </div>
-
-                                        <div class="fr-grid-deatil">
-                                            <span><i class="ti-location-pin mr-1"></i>Denever, USA</span>
-                                            <h5 class="fr-can-name"><a href="agent-page.html">Anna K. Young</a></h5>
-                                            <ul class="inline_social">
-                                                <li><a href="#" class="fb"><i class="ti-facebook"></i></a></li>
-                                                <li><a href="#" class="ln"><i class="ti-linkedin"></i></a></li>
-                                                <li><a href="#" class="ins"><i class="ti-instagram"></i></a></li>
-                                                <li><a href="#" class="tw"><i class="ti-twitter"></i></a></li>
-                                            </ul>
-                                        </div>
-
-                                        <div class="fr-infos-deatil">
-                                            <a href="#" data-toggle="modal" data-target="#autho-message" class="btn agent-btn theme-bg"><i class="fa fa-envelope mr-2"></i>Message</a>
-                                            <a href="#" class="btn agent-btn theme-black"><i class="fa fa-phone"></i></a>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <!-- Single Item -->
-                            <div class="single_items">
-                                <div class="grid_agents">
-                                    <div class="elio_mx_list theme-bg-2">42 Listings</div>
-                                    <div class="grid_agents-wrap">
-
-                                        <div class="fr-grid-thumb">
-                                            <a href="agent-page.html">
-                                                <span class="verified"><img src="~/assets/img/verified.svg" class="verify mx-auto" alt=""></span>
-                                                <img src="~/assets/img/team-5.jpg" class="img-fluid mx-auto" alt="">
-                                            </a>
-                                        </div>
-
-                                        <div class="fr-grid-deatil">
-                                            <span><i class="ti-location-pin mr-1"></i>2272 Briarwood Drive</span>
-                                            <h5 class="fr-can-name"><a href="agent-page.html">Michael P. Grimaldo</a></h5>
-                                            <ul class="inline_social">
-                                                <li><a href="#" class="fb"><i class="ti-facebook"></i></a></li>
-                                                <li><a href="#" class="ln"><i class="ti-linkedin"></i></a></li>
-                                                <li><a href="#" class="ins"><i class="ti-instagram"></i></a></li>
-                                                <li><a href="#" class="tw"><i class="ti-twitter"></i></a></li>
-                                            </ul>
-                                        </div>
-
-                                        <div class="fr-infos-deatil">
-                                            <a href="#" data-toggle="modal" data-target="#autho-message" class="btn agent-btn theme-bg"><i class="fa fa-envelope mr-2"></i>Message</a>
-                                            <a href="#" class="btn agent-btn theme-black"><i class="fa fa-phone"></i></a>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-                            </div>
-
+                            }
                         </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-        <!-- ============================ Top Agents End ================================== -->
-        <!-- ============================ Price Table Start ================================== -->
-        <section class="min">
-            <div class="container">
-
-                <div class="row justify-content-center">
-                    <div class="col-lg-7 col-md-10 text-center">
-                        <div class="sec-heading center">
-                            <h2>Select your Package</h2>
-                            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row align-items-center">
-
-                    <!-- Single Package -->
-                    <div class="col-lg-4 col-md-4">
-                        <div class="pricing_wrap">
-                            <div class="prt_head">
-                                <h4>Basic</h4>
-                            </div>
-                            <div class="prt_price">
-                                <h2><span>$</span>29</h2>
-                                <span>per user, per month</span>
-                            </div>
-                            <div class="prt_body">
-                                <ul>
-                                    <li>99.5% Uptime Guarantee</li>
-                                    <li>120GB CDN Bandwidth</li>
-                                    <li>5GB Cloud Storage</li>
-                                    <li class="none">Personal Help Support</li>
-                                    <li class="none">Enterprise SLA</li>
-                                </ul>
-                            </div>
-                            <div class="prt_footer">
-                                <a href="#" class="btn choose_package">Start Basic</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Single Package -->
-                    <div class="col-lg-4 col-md-4">
-                        <div class="pricing_wrap">
-                            <div class="prt_head">
-                                <div class="recommended">Best Value</div>
-                                <h4>Standard</h4>
-                            </div>
-                            <div class="prt_price">
-                                <h2><span>$</span>49</h2>
-                                <span>per user, per month</span>
-                            </div>
-                            <div class="prt_body">
-                                <ul>
-                                    <li>99.5% Uptime Guarantee</li>
-                                    <li>150GB CDN Bandwidth</li>
-                                    <li>10GB Cloud Storage</li>
-                                    <li>Personal Help Support</li>
-                                    <li class="none">Enterprise SLA</li>
-                                </ul>
-                            </div>
-                            <div class="prt_footer">
-                                <a href="#" class="btn choose_package active">Start Standard</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Single Package -->
-                    <div class="col-lg-4 col-md-4">
-                        <div class="pricing_wrap">
-                            <div class="prt_head">
-                                <h4>Platinum</h4>
-                            </div>
-                            <div class="prt_price">
-                                <h2><span>$</span>79</h2>
-                                <span>2 user, per month</span>
-                            </div>
-                            <div class="prt_body">
-                                <ul>
-                                    <li>100% Uptime Guarantee</li>
-                                    <li>200GB CDN Bandwidth</li>
-                                    <li>20GB Cloud Storage</li>
-                                    <li>Personal Help Support</li>
-                                    <li>Enterprise SLA</li>
-                                </ul>
-                            </div>
-                            <div class="prt_footer">
-                                <a href="#" class="btn choose_package">Start Platinum</a>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-        </section>
-        <!-- ============================ Price Table End ================================== -->
-        <!-- ============================ Call To Action ================================== -->
-        <section class="theme-bg call_action_wrap-wrap">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-
-                        <div class="call_action_wrap">
-                            <div class="call_action_wrap-head">
-                                <h3>Bạn Có Câu Hỏi Nào Không ?</h3>
-                                <span>Chúng Tôi Sẽ Giúp Đỡ Mọi Người Dựa vào Kinh Nghiệm Và Kỹ Thuật.</span>
-                            </div>
-                            <a href="#" class="btn btn-call_action_wrap">Liên Hệ Ngay Hôm Nay</a>
-                        </div>
-
                     </div>
                 </div>
             </div>
         </section>
-        <!-- ============================ Call To Action End ================================== -->
-        <!-- ============================ Footer Start ================================== -->
     </div>
 </body>
-

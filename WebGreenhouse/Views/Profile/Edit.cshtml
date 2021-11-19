@@ -1,0 +1,151 @@
+﻿@model Model.EF.Customer
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<body class="yellow-skin">
+    <div class="preloader"></div>
+    <div id="main-wrapper">
+        <div class="clearfix"></div>
+        <div class="page-title" style="background:#f4f4f4 url(assets/img/slider-5.jpg);" data-overlay="5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+
+                        <div class="breadcrumbs-wrap">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item active" aria-current="page">Hồ Sơ Của Tôi</li>
+                            </ol>
+                            <h2 class="breadcrumb-title">Tài Khoản & Thông Tin</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ============================ Page Title End ================================== -->
+        <!-- ============================ User Dashboard ================================== -->
+
+        <section class="gray pt-5 pb-5">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-3 col-md-4 col-sm-12">
+                        <div class="property_dashboard_navbar">
+
+                            <div class="dash_user_menues">
+                                <ul>
+                                    <li class="active"><a href="/profile/profile/@Session["ID"]"><i class="fa fa-user-tie"></i>Thông Tin</a></li>
+                                    <li><a href="bookmark-list.html"><i class="fa fa-bookmark"></i>Lưu Bài Yêu Thích<span class="notti_coun style-2">7</span></a></li>
+                                    <li><a href="/profile/historyorder/@Session["ID"]"><i class="fa fa-tasks"></i>Đơn Hàng Đang Chờ <span class="notti_coun style-3">3</span></a></li>
+                                    <li><a href="messages.html"><i class="fa fa-envelope"></i>Tin Nhắn<span class="notti_coun style-3">3</span></a></li>
+                                    <li><a href="/Profile/ChangePassword/@Session["ID"]"><i class="fa fa-unlock-alt"></i>Thay Đổi Mật Khẩu</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="dash_user_footer">
+                                <ul>
+                                    <li><a href="/home/logout"><i class="fa fa-power-off"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-comment"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 col-md-8 col-sm-12">
+                        <div class="dashboard-body">
+                            @using (Html.BeginForm())
+                            {
+                                @Html.AntiForgeryToken()
+
+                                <div class="dashboard-wraper">
+                                    <!-- Basic Information -->
+                                    <div class="frm_submit_block">
+                                        <h4>Thông Tin Của Tôi</h4>
+                                        <div class="frm_submit_wrap">
+                                            <div class="form-row">
+                                                <input name="CustomerID" value="@Model.CustomerID" hidden />
+                                                <div class="form-group col-md-6">
+                                                    <label>Hình Nền</label>
+                                                    <input type="text" class="form-control" id="Avata" name="Avata" value="@Model.Avata">
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label>Họ Và Tên</label>
+                                                    <input type="text" class="form-control" id="CustomerName" name="CustomerName" value="@Model.CustomerName">
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label>Tên Đăng Nhập</label>
+                                                    <input type="text" class="form-control" id="username" name="username" value="@Model.UserName">
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label>Email</label>
+                                                    <input type="email" class="form-control" id="CustomerEmail" name="CustomerEmail" value="@Model.CustomerEmail">
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label>Số Điện Thoại</label>
+                                                    <input type="text" class="form-control" id="NumberPhone" name="NumberPhone" value="@Model.NumberPhone">
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label>Ngày tạo</label>
+                                                    <input type="datetime-local" class="form-control" id="CreateDate" name="CreateDate" value="@Model.CreateDate" hidden>
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label>Trạng Thái</label>
+                                                    <input type="text" class="form-control" id="Status" name="Status" value="@Model.Status">
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label>Mật Khẩu</label>
+                                                    <input type="text" class="form-control" id="PassWord" name="PassWord" value="@Model.PassWord">
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label>Địa Chỉ</label>
+                                                    <input type="text" class="form-control" id="CustomerAddress" name="CustomerAddress" value="@Model.CustomerAddress">
+                                                </div>
+
+                                                <div class="form-group col-md-6">
+                                                    <label>Công Việc</label>
+                                                    <input type="text" class="form-control" id="CustomerWork" name="CustomerWork" value="@Model.CustomerWork">
+                                                </div>
+
+                                                <div class="form-group col-md-12">
+                                                    <label>Mô Tả Bản Thân</label>
+                                                    <input class="form-control" id="Description" name="Description" value="@Model.Description" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="frm_submit_block">
+                                        <h4>Tài Khoản Liên Kết</h4>
+                                        <div class="frm_submit_wrap">
+                                            <div class="form-row">
+
+                                                <div class="form-group col-md-6">
+                                                    <label>Facebook</label>
+                                                    <input type="text" id="Facebook" name="LinkFacebook" class="form-control" value="@Model.LinkFacebook">
+                                                </div>
+
+                                                <div class="form-group col-md-6">
+                                                    <label>Zalo</label>
+                                                    <input type="text" id="zalo" name="LinkZalo" class="form-control" value="@Model.LinkZalo">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-md-offset-2 col-md-10">
+                                            <input type="submit" value="Save" class="btn btn-danger" />
+                                            <a href="@Url.Action("Profile", "Profile",new { id = Model.CustomerID})" class="btn btn-warning">Trở Lại</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- ============================ User Dashboard End ================================== -->
+    </div>
+</body>

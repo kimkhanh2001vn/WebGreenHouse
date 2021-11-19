@@ -1,0 +1,46 @@
+﻿@model List<WebGreenhouse.Models.CartItem>
+@using WebGreenhouse.Common
+
+<ul class="nav-menu">
+
+    <li class="active">
+        <a href="#">Về Công Ty<span class="submenu-indicator"></span></a>
+        <ul class="nav-dropdown nav-submenu">
+            <li><a href="~/home/index">Trang Chủ</a></li>
+            <li><a href="~/home/about">Giới Thiệu</a></li>
+            <li><a href="/home/contact">Liên Hệ</a></li>
+            <li><a href="/home/FAQ">FAQ</a></li>
+        </ul>
+    </li>
+
+    <li>
+        <a href="/home/Rents">Tìm Thuê<span class="submenu-indicator"></span></a>
+    </li>
+
+    <li>
+        <a href="/Home/Sells">Tìm Mua<span class="submenu-indicator"></span></a>
+    </li>
+
+    <li>
+        <a href="/usermember/index">Môi Giới<span class="submenu-indicator"></span></a>
+    </li>
+    <li>
+        <a href="#">Dự Án<span class="submenu-indicator"></span></a>
+    </li>
+</ul>
+
+<ul class="butt nav-menu nav-menu-social align-to-right">
+    <li>
+        <a href="#">Tên Tài Khoản : @Session[CommonStants.username_Customer]<span class="submenu-indicator"></span></a>
+        <ul class="nav-dropdown nav-submenu">
+            <li><a href="/profile/profile/@Session[CommonStants.ID_Customer]">Thông Tin</a></li>
+            <li><a href="@Url.Action("Logout","Home")">Đăng Xuất</a></li>
+        </ul>
+    </li>
+    <li class="">
+        <a href="/cart/index" style="cursor:pointer" class="theme-cl giohang">
+            <i class="fa fa-cart-plus mr-1" style="font-size:25px"></i>
+            <span class="sogiohang">@Model.Count</span>
+        </a>
+    </li>
+</ul>

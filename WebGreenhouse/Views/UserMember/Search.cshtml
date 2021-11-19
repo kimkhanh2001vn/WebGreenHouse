@@ -1,0 +1,291 @@
+﻿@using Model.EF
+@using PagedList.Mvc;
+@{
+    ViewBag.Title = "Search";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var list = (PagedList.PagedList<User>)ViewBag.list;
+    var db = new GreenHouseDB();
+    var searchAreas = ViewBag.searchAreas;
+    var searchstring = (List<User>)ViewBag.searchstring;
+}
+
+<style>
+    #Count {
+        font-size: 35px;
+    }
+
+    .container .row .col-lg-12 .card .card-body {
+        height: 60px;
+    }
+
+    #search-form .row .col-12 .row .col-lg-1 button {
+        border-radius: 0px 8px 8px 0px;
+    }
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 card-margin">
+            <div class="card search-form">
+                <div class="card-body p-0">
+                    @using (Html.BeginForm("Search", "UserMember", FormMethod.Get))
+                    {
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="row no-gutters">
+
+                                    <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                                        @Html.DropDownList("CategoryID", (SelectList)ViewData["CategoryID"], new { @class = "form-control" })
+
+                                    </div>
+                                    <div class="col-lg-8 col-md-6 col-sm-12 p-0">
+                                        <input type="text" placeholder="Tìm Kiếm..." class="form-control" id="search" name="search">
+                                    </div>
+                                    
+                                    <div class="col-lg-1 col-md-3 col-sm-12 p-0">
+                                        <button type="submit" class="btn btn-info">
+                                            <i class="fa fa-search-location"></i>
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="card card-margin">
+                <div class="card-body">
+                    <div class="row search-body">
+                        <div class="col-lg-12">
+                            <div class="search-result">
+                                <div class="result-header">
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="records">
+                                                Trang @(list.PageCount<list.PageNumber?0:list.PageNumber) of @list.PageCount
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            @*<div class="result-actions">
+                                                    <div class="result-sorting">
+                                                        <span>Sort By:</span>
+                                                        <select class="form-control border-0" id="exampleOption">
+                                                            <option value="1">Relevance</option>
+                                                            <option value="2">Names (A-Z)</option>
+                                                            <option value="3">Names (Z-A)</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="result-views">
+                                                        <button type="button" class="btn btn-soft-base btn-icon">
+                                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                                 width="24"
+                                                                 height="24"
+                                                                 viewBox="0 0 24 24"
+                                                                 fill="none"
+                                                                 stroke="currentColor"
+                                                                 stroke-width="2"
+                                                                 stroke-linecap="round"
+                                                                 stroke-linejoin="round"
+                                                                 class="feather feather-list">
+                                                                <line x1="8" y1="6" x2="21" y2="6"></line>
+                                                                <line x1="8" y1="12" x2="21" y2="12"></line>
+                                                                <line x1="8" y1="18" x2="21" y2="18"></line>
+                                                                <line x1="3" y1="6" x2="3" y2="6"></line>
+                                                                <line x1="3" y1="12" x2="3" y2="12"></line>
+                                                                <line x1="3" y1="18" x2="3" y2="18"></line>
+                                                            </svg>
+                                                        </button>
+                                                        <button type="button" class="btn btn-soft-base btn-icon">
+                                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                                 width="24"
+                                                                 height="24"
+                                                                 viewBox="0 0 24 24"
+                                                                 fill="none"
+                                                                 stroke="currentColor"
+                                                                 stroke-width="2"
+                                                                 stroke-linecap="round"
+                                                                 stroke-linejoin="round"
+                                                                 class="feather feather-grid">
+                                                                <rect x="3" y="3" width="7" height="7"></rect>
+                                                                <rect x="14" y="3" width="7" height="7"></rect>
+                                                                <rect x="14" y="14" width="7" height="7"></rect>
+                                                                <rect x="3" y="14" width="7" height="7"></rect>
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                </div>*@
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="result-body">
+                                    <div class="table-responsive">
+                                        <table class="table widget-26">
+                                            <tbody>
+                                                @{
+                                                    if (searchstring != null)
+                                                    {
+                                                        foreach (var item in searchstring)
+                                                        {
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="widget-26-job-emp-img">
+                                                                        <img src="https://bootdey.com/img/Content/avatar/avatar5.png" alt="Company" />
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="widget-25-job-title">
+                                                                        <a href="#">@item.Name</a>
+                                                                        <p class="m-0"><a href="#" class="employer-name">@item.Email.</a> <span class="text-muted time">Hôm Nay</span></p>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="widget-25-job-info">
+                                                                        <p class="type m-0">Tham Gia Vào</p>
+                                                                        <p class="text-muted m-0">Ngày <span class="location">@item.CreateDate</span></p>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+
+                                                                    <div class="widget-25-job-info">
+                                                                        <p class="text-muted m-0"><span id="Count">  </span> <span class="location"></span>Bài Đã Đăng</p>
+                                                                    </div>
+
+                                                                </td>
+                                                                <td>
+                                                                    <div class="widget-26-job-category bg-soft-base">
+                                                                        <span>@item.MyWork</span>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="widget-26-job-starred">
+                                                                        <a href="#">
+                                                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                                                 width="24"
+                                                                                 height="24"
+                                                                                 viewBox="0 0 24 24"
+                                                                                 fill="none"
+                                                                                 stroke="currentColor"
+                                                                                 stroke-width="2"
+                                                                                 stroke-linecap="round"
+                                                                                 stroke-linejoin="round"
+                                                                                 class="feather feather-star">
+                                                                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                                                            </svg>
+                                                                        </a>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        }
+                                                    }
+                                                    else if (searchAreas != null)
+                                                    {
+                                                        foreach (var item in searchAreas)
+                                                        {
+                                                            dynamic d = item;
+                                                            var name = d.GetType().GetProperty("Name").GetValue(d, null);
+                                                            var Email = d.GetType().GetProperty("Email").GetValue(d, null);
+                                                            var ID = d.GetType().GetProperty("ID").GetValue(d, null);
+                                                            var CreateDate = d.GetType().GetProperty("CreateDate").GetValue(d, null);
+                                                            var MyWork = d.GetType().GetProperty("MyWork").GetValue(d, null);
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="widget-26-job-emp-img">
+                                                                        <img src="https://bootdey.com/img/Content/avatar/avatar5.png" alt="Company" />
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="widget-25-job-title">
+                                                                        <a href="#">@name</a>
+                                                                        <p class="m-0"><a href="#" class="employer-name">@Email.</a> <span class="text-muted time">Hôm Nay</span></p>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="widget-25-job-info">
+                                                                        <p class="type m-0">Tham Gia Vào</p>
+                                                                        <p class="text-muted m-0">Ngày <span class="location">@CreateDate</span></p>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+
+                                                                    <div class="widget-25-job-info">
+                                                                        <p class="text-muted m-0"><span id="Count">  </span> <span class="location"></span>Bài Đã Đăng</p>
+                                                                    </div>
+
+                                                                </td>
+                                                                <td>
+                                                                    <div class="widget-26-job-category bg-soft-base">
+                                                                        <span>@MyWork</span>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="widget-26-job-starred">
+                                                                        <a href="#">
+                                                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                                                 width="24"
+                                                                                 height="24"
+                                                                                 viewBox="0 0 24 24"
+                                                                                 fill="none"
+                                                                                 stroke="currentColor"
+                                                                                 stroke-width="2"
+                                                                                 stroke-linecap="round"
+                                                                                 stroke-linejoin="round"
+                                                                                 class="feather feather-star">
+                                                                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                                                            </svg>
+                                                                        </a>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        <div class="alert alert-info alert-dismissible fade show text-center" id="err1" style="margin-bottom: 30px;">
+                                                            <span class="alert-close" data-dismiss="alert"></span>
+                                                            &nbsp;&nbsp;Không có  <strong><i class="fa fa-times"></i></strong>.
+                                                        </div>
+                                                    }
+                                                }
+
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <nav class="d-flex justify-content-center">
+                        @*<ul class="pagination pagination-base pagination-boxed pagination-square mb-0">
+                                <li class="page-item">
+                                    <a class="page-link no-border" href="#">
+                                        <span aria-hidden="true">«</span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                </li>
+                                <li class="page-item active"><a class="page-link no-border" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link no-border" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link no-border" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link no-border" href="#">4</a></li>
+                                <li class="page-item">
+                                    <a class="page-link no-border" href="#">
+                                        <span aria-hidden="true">»</span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                </li>
+                            </ul>*@
+
+                        <div class="menutrang">
+                            @Html.PagedListPager(list, page => Url.Action("Index", new { page = page }))
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

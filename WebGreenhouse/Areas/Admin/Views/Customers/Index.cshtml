@@ -1,0 +1,106 @@
+﻿@model IEnumerable<Model.EF.Customer>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<link href="~/assets/css/TableTheme.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+
+<html>
+<body>
+    <div class="preloader"></div>
+    <div class="bootstrap snippets bootdey" style="padding:40px">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="main-box no-header clearfix">
+                    <div class="main-box-body clearfix">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tr>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.UserName)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.CustomerName)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.CustomerAddress)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.CustomerWork)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Status)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.CustomerEmail)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.NumberPhone)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.CreateDate)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Avata)
+                                    </th>
+                                    <th></th>
+                                </tr>
+
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.UserName)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.CustomerName)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.CustomerAddress)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.CustomerWork)
+                                        </td>
+                                        <td>
+                                            @if (item.Status == true)
+                                            {
+                                                <p class="label label-success">Đang hoạt động</p>
+                                            }
+                                            else
+                                            {
+                                                <p class="label label-danger">Ngừng hoạt động</p>
+                                            }
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.CustomerEmail)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.NumberPhone)
+                                        </td>
+                                        <td>
+                                            @Html.FormatValue(item.CreateDate, "{0:dd/MM/yyyy}")
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Avata)
+                                        </td>
+
+                                        <td>
+                                            <a href="@Url.Action("Edit","Customers",new { id = item.CustomerID})"><i class="fa fa-edit"></i></a>
+                                            <a href="@Url.Action("Details","Customers",new { id = item.CustomerID})"><i class="fa fa-sliders-h"></i></a>
+                                            <a href="@Url.Action("Delete","Customers",new { id = item.CustomerID})"><i class="fa fa-times-circle"></i></a>
+                                        </td>
+                                    </tr>
+                                }
+
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

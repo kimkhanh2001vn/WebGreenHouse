@@ -1,0 +1,324 @@
+﻿@using Model.EF 
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/admin/views/shared/_Layout.cshtml";
+    var list = (List<Model.EF.User>)ViewBag.User;
+    var db = new GreenHouseDB();
+}
+
+<html dir="ltr" lang="en" class="no-outlines">
+<body>
+    <div class="wrapper">
+        <section class="main--content">
+            <div class="row gutter-20">
+                <div class="col-md-3">
+                    <div class="panel">
+                        <div class="miniStats--panel">
+                            <div class="miniStats--header bg-darker">
+                                <p class="miniStats--chart" data-trigger="sparkline" data-type="bar" data-width="4" data-height="30" data-color="#2bb3c0">5,6,9,4,9,5,3,5,9,15,3,2,2,3,9,11,9,7,20,9,7,6</p>
+                                <p class="miniStats--label text-white bg-blue"> <i class="fa fa-level-up-alt"></i> <span>10%</span> </p>
+                            </div>
+                            <div class="miniStats--body">
+                                <i class="miniStats--icon fa fa-user text-blue"></i>
+                                <p class="miniStats--caption text-blue">Monthly</p>
+                                <h3 class="miniStats--title h4">Khách Hàng</h3>
+                                <p class="miniStats--num text-blue">@db.Customers.Count()</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="panel">
+                        <div class="miniStats--panel">
+                            <div class="miniStats--header bg-darker">
+                                <p class="miniStats--chart" data-trigger="sparkline" data-type="bar" data-width="4" data-height="30" data-color="#e16123">2,2,3,9,11,9,7,20,9,7,6,5,6,9,4,9,5,3,5,9,15,3</p>
+                                <p class="miniStats--label text-white bg-orange"> <i class="fa fa-level-down-alt"></i> <span>10%</span> </p>
+                            </div>
+                            <div class="miniStats--body">
+                                <i class="miniStats--icon fa fa-ticket-alt text-orange"></i>
+                                <p class="miniStats--caption text-orange">Monthly</p>
+                                <h3 class="miniStats--title h4">Số Bài Đăng</h3>
+                                <p class="miniStats--num text-orange">@db.Posts.Count()</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="panel">
+                        <div class="miniStats--panel">
+                            <div class="miniStats--header bg-darker">
+                                <p class="miniStats--chart" data-trigger="sparkline" data-type="bar" data-width="4" data-height="30" data-color="#e16123">2,2,3,9,11,9,7,20,9,7,6,5,6,9,4,9,5,3,5,9,15,3</p>
+                                <p class="miniStats--label text-white bg-orange"> <i class="fa fa-level-down-alt"></i> <span>10%</span> </p>
+                            </div>
+                            <div class="miniStats--body">
+                                <i class="miniStats--icon fa fa-ticket-alt text-orange"></i>
+                                <p class="miniStats--caption text-blue">Monthly</p>
+                                <h3 class="miniStats--title h4">Số Bài Bán Được</h3>
+                                <p class="miniStats--num text-orange">@db.Orders.Count(x=>x.Status == 3)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="panel">
+                        <div class="miniStats--panel">
+                            <div class="miniStats--header bg-darker">
+                                <p class="miniStats--chart" data-trigger="sparkline" data-type="bar" data-width="4" data-height="30" data-color="#009378">2,2,3,9,11,9,7,20,9,7,6,5,6,9,4,9,5,3,5,9,15,3</p>
+                                <p class="miniStats--label text-white bg-green"> <i class="fa fa-level-up-alt"></i> <span>10%</span> </p>
+                            </div>
+                            <div class="miniStats--body">
+                                <i class="miniStats--icon fa fa-rocket text-green"></i>
+                                <p class="miniStats--caption text-green">Monthly</p>
+                                <h3 class="miniStats--title h4">Số bài Bị Hủy</h3>
+                                <p class="miniStats--num text-green">
+                                    @db.Orders.Count(x => x.Status == 3)
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-9">
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                <select name="filter" data-trigger="selectmenu" data-minimum-results-for-search="-1">
+                                    <option value="average-search">Nhân Viên</option>
+                                </select>
+                            </h3>
+                            <div class="dropdown">
+                                <button type="button" class="btn-link dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-ellipsis-v"></i> </button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#"><i class="fa fa-sync"></i>Cập Nhật</a></li>
+                                    <li><a href="#"><i class="fa fa-cogs"></i>Cài Đặt</a></li>
+                                    <li><a href="#"><i class="fa fa-times"></i>Xóa</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table style--2">
+                                    <thead>
+                                        <tr>
+                                            <th>Hình Ảnh</th>
+                                            <th>Công Việc</th>
+                                            <th>Tên Nhân Viên</th>
+                                            <th>Ngày Tham Gia</th>
+                                            <th>Số BÀi Đăng</th>
+                                            <th>Số Lượng Khách Hàng</th>
+                                            <th>Trạng Thái</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @{ foreach (var item in list)
+                                            {
+                                                <tr>
+                                                    <td><img src="~/Areas/Admin/Resources/assets/img/products/thumb-01.jpg" alt=""></td>
+                                                    <td>@item.MyWork</td>
+                                                    <td><a href="#" class="btn-link">@item.Name</a></td>
+                                                    <td>@Html.FormatValue(item.CreateDate, "{0:dd/MM/yyyy}")</td>
+                                                    <td>@db.Posts.Count(x => x.CreatedByID == item.ID)</td>
+                                                    <td><span class="text-muted"></span></td>
+                                                    @if (item.Status == true)
+                                                    {
+                                                        <td><span class="label label-success">Hoạt Động</span></td>
+                                                    }
+                                                    else
+                                                    {
+                                                        <td><span class="label label-danger">Khóa</span></td>
+                                                    }
+
+                                                </tr>
+                                            }
+
+                                        }
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6">
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Total Overdue</h3>
+                            <div class="dropdown">
+                                <button type="button" class="btn-link dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-ellipsis-v"></i> </button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#"><i class="fa fa-sync"></i>Update Data</a></li>
+                                    <li><a href="#"><i class="fa fa-cogs"></i>Settings</a></li>
+                                    <li><a href="#"><i class="fa fa-times"></i>Remove Panel</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="panel-chart">
+                            <div class="chart--title text-blue">
+                                <h2 class="h2">$14,200,000</h2>
+                            </div>
+                            <div id="morrisLineChart03" class="chart--body line--chart style--3"></div>
+                            <div class="chart--action"> <a href="#" class="btn-link">Export PDF <i class="fa fa-long-arrow-right"></i></a> </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-md-6">
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Sales Progress</h3>
+                            <div class="dropdown">
+                                <button type="button" class="btn-link dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-ellipsis-v"></i> </button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">This Week</a></li>
+                                    <li><a href="#">Last Week</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="panel-chart">
+                            <div id="morrisLineChart01" class="chart--body line--chart style--1"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6">
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Monthly Traffic</h3>
+                            <div class="dropdown">
+                                <button type="button" class="btn-link dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-ellipsis-v"></i> </button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#"><i class="fa fa-sync"></i>Update Data</a></li>
+                                    <li><a href="#"><i class="fa fa-cogs"></i>Settings</a></li>
+                                    <li><a href="#"><i class="fa fa-times"></i>Remove Panel</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="panel-chart">
+                            <div id="morrisLineChart02" class="chart--body line--chart style--2"></div>
+                            <div class="chart--stats style--3">
+                                <ul class="nav">
+                                    <li>
+                                        <p data-trigger="sparkline" data-type="bar" data-width="5" data-height="38" data-color="#2bb3c0">0,5,9,7,12,15,12,5</p>
+                                        <p><span class="label">Total Visitors</span></p>
+                                        <p class="amount">12,202</p>
+                                    </li>
+                                    <li>
+                                        <p data-trigger="sparkline" data-type="bar" data-width="5" data-height="38" data-color="#e16123">0,15,12,5,5,9,7,12</p>
+                                        <p><span class="label">Total Sales</span></p>
+                                        <p class="amount">25,051</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3">
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                <select name="filter" data-trigger="selectmenu" data-minimum-results-for-search="-1">
+                                    <option value="top-search">Top Search</option>
+                                    <option value="average-search">Average Search</option>
+                                </select>
+                            </h3>
+                            <div class="dropdown">
+                                <button type="button" class="btn-link dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-ellipsis-v"></i> </button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#"><i class="fa fa-sync"></i>Update Data</a></li>
+                                    <li><a href="#"><i class="fa fa-cogs"></i>Settings</a></li>
+                                    <li><a href="#"><i class="fa fa-times"></i>Remove Panel</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <div class="vector--map" data-trigger="jvectorMap" data-map-selected='["US", "CA", "MX", "GT", "HN", "BZ", "SV", "NI", "CR", "BS", "CU", "JM", "HT", "DO", "PR", "PA", "CO", "VE", "TT", "GY", "SR", "GL", "EC", "PE", "BR", "BO", "PY", "CL", "AR", "UY", "FK"]'></div>
+                            <div class="map--stats">
+                                <table class="table">
+                                    <tr>
+                                        <td>United States</td>
+                                        <td>65%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>United Kingdom</td>
+                                        <td>15%</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"> <a href="#" class="btn-link">View All</a> </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-6">
+                    <div class="panel">
+                        <div class="profile--panel">
+                            <div class="img-wrapper" data-bg-img="assets/img/covers/01_800x150.jpg">
+                                <div class="img online"> <img src="~/Areas/Admin/Resources/assets/img/avatars/01_150x150.png" alt="" class="rounded-circle"> </div>
+                            </div>
+                            <div class="name">
+                                <h3 class="h3">Henry Foster</h3>
+                            </div>
+                            <div class="role">
+                                <p>Web Developer &amp; Graphic Designer</p>
+                            </div>
+                            <div class="action"> <a href="#" class="btn btn-info">+ Follow</a> </div>
+                            <div class="bio">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo ratione vitae aliquid aliquam provident nostrum itaque quam minima molestias.</p>
+                            </div>
+                            <ul class="info nav text-uppercase">
+                                <li> <strong>1125</strong> <span>Items</span> </li>
+                                <li> <strong>133</strong> <span>Projects</span> </li>
+                                <li> <strong>3025</strong> <span>Followers</span> </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6">
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Comments</h3>
+                            <div class="dropdown">
+                                <button type="button" class="btn-link dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-ellipsis-v"></i> </button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#"><i class="fa fa-sync"></i>Update Data</a></li>
+                                    <li><a href="#"><i class="fa fa-times"></i>Remove Panel</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="comments-panel">
+                            <ul>
+                                <li>
+                                    <div class="img"> <img src="~/Areas/Admin/Resources/assets/img/avatars/02_40x40.png" alt="" class="rounded-circle"> </div>
+                                    <div class="info">
+                                        <h3 class="h6">John Doe</h3>
+                                        <p>Lorem ipsum dolor sit elit, sed do eiusmod tempor.</p>
+                                        <div class="action"> <span class="status text-orange">Pending</span> <a href="#" class="btn btn-sm btn-info">Delete</a> </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="img"> <img src="~/Areas/Admin/Resources/assets/img/avatars/03_40x40.png" alt="" class="rounded-circle"> </div>
+                                    <div class="info">
+                                        <h3 class="h6">Jane Doe</h3>
+                                        <p>Lorem ipsum dolor sit elit, sed do eiusmod tempor.</p>
+                                        <div class="action"> <span class="status text-blue">Approved</span> <a href="#" class="btn btn-sm btn-info">Delete</a> </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="img"> <img src="~/Areas/Admin/Resources/assets/img/avatars/04_40x40.png" alt="" class="rounded-circle"> </div>
+                                    <div class="info">
+                                        <h3 class="h6">Harry Johnson</h3>
+                                        <p>Lorem ipsum dolor sit elit, sed do eiusmod tempor.</p>
+                                        <div class="action"> <span class="status text-red">Rejected</span> <a href="#" class="btn btn-sm btn-info">Delete</a> </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="nav"> <a href="#" class="next btn-link">Older Comments <i class="fa fa-angle-double-right"></i></a> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

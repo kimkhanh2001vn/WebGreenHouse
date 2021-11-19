@@ -18,13 +18,26 @@ namespace WebGreenhouse
             // ready for production, use the build tool at https://modernizr.com to pick only the tests you need.
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
-
-            bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.js"));
-
+            bundles.Add(new ScriptBundle("~/Scripts").Include(
+                "~/Scripts/jquery-3.6.0.min.js",
+                "~/Scripts/bootstrap.min.js",
+                "~/Scripts/bootstrap.js"
+                ));
+            bundles.Add(new ScriptBundle("~/assets/js").Include(
+                      "~/assets/js/select2.min.js",
+                      "~/assets/js/jquery.min.js",
+                      "~/assets/js/popper.min.js",
+                      "~/assets/js/ion.rangeSlider.min.js",
+                      "~/assets/js/slick.js",
+                      "~/assets/js/daterangepicker.js",
+                      "~/assets/js/custom.js"
+                ));
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/assets/css/styles.css",
+                      "~/assets/css/UserTheme.css",
+                      "~/Areas/Admin/Resources/assets/css/Noticafition.css"
+                      ));
         }
     }
 }

@@ -1,0 +1,147 @@
+﻿@{
+    ViewBag.Title = "Profile";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<html dir="ltr" lang="en" class="no-outlines">
+<!-- Mirrored from themelooks.net/demo/dadmin/html/profile.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 08 Sep 2021 12:54:32 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Dashboard - DAdmin</title>
+    <link href="~/assets/css/LoginTheme.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="row form-group">
+                @{ foreach (var user in Model)
+                    {
+                        <div class="col-xs-12 col-sm-9">
+
+                            <!-- User profile -->
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">Thông Tin</h4>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="profile__avatar">
+                                        <img src="~/Areas/Admin/Resources/img/Content/avatar/avatar5.png" alt="...">
+                                    </div>
+                                    <div class="profile__header">
+                                        <h4>@user.Name</h4>
+                                        <p class="text-muted">
+                                            @user.Description
+                                        </p>
+                                        <p>
+                                            <a href="#">facebook.com</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- User info -->
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">Thông Tin Chi Tiết</h4>
+                                </div>
+                                <div class="panel-body">
+                                    <table class="table profile__table">
+                                        <tbody>
+                                            <tr>
+                                                <th><strong>Địa Chỉ</strong></th>
+                                                <td>@user.Address</td>
+                                            </tr>
+                                            <tr>
+                                                <th><strong>Email</strong></th>
+                                                <td>@user.Email</td>
+                                            </tr>
+                                            <tr>
+                                                <th><strong>Số Điện Thoại</strong></th>
+                                                <td>@user.NumberPhone</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <!-- Community -->
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">Community</h4>
+                                </div>
+                                <div class="panel-body">
+                                    <table class="table profile__table">
+                                        <tbody>
+                                            <tr>
+                                                <th><strong>Comments</strong></th>
+                                                <td>58584</td>
+                                            </tr>
+                                            <tr>
+                                                <th><strong>Member since</strong></th>
+                                                <td>Jan 01, 2016</td>
+                                            </tr>
+                                            <tr>
+                                                <th><strong>Last login</strong></th>
+                                                <td>1 day ago</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-3">
+
+                            <!-- Contact user -->
+                            <p>
+                                <a href="/admin/profile/edit/@user.ID" class="profile__contact-btn btn btn-lg btn-block btn-outline-info">
+                                    Chỉnh Sửa Thông Tin
+                                </a>
+                            </p>
+
+                            <hr class="profile__contact-hr">
+
+                            <!-- Contact info -->
+                            <div class="profile__contact-info">
+                                <div class="profile__contact-info-item">
+                                    <div class="profile__contact-info-icon">
+                                        <i class="fa fa-phone"></i>
+                                    </div>
+                                    <div class="profile__contact-info-body">
+                                        <h5 class="profile__contact-info-heading">Số Điện Thoại</h5>
+                                        (+84)@user.NumberPhone
+                                    </div>
+                                </div>
+                                <div class="profile__contact-info-item">
+                                    <div class="profile__contact-info-icon">
+                                        <i class="fa fa-envelope-square"></i>
+                                    </div>
+                                    <div class="profile__contact-info-body">
+                                        <h5 class="profile__contact-info-heading">E-mail</h5>
+                                        <a href="mailto:admin@domain.com">@user.Email</a>
+                                    </div>
+                                </div>
+                                <div class="profile__contact-info-item">
+                                    <div class="profile__contact-info-icon">
+                                        <i class="fa fa-map-marker"></i>
+                                    </div>
+                                    <div class="profile__contact-info-body">
+                                        <h5 class="profile__contact-info-heading">Địa Chỉ Liên Hệ</h5>
+                                        @user.Address
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+                }
+            </div>
+            <div class="form-group">
+                <p class="btn btn-light">@Html.ActionLink("Trở Về", "Index", "Home")</p>
+            </div>
+        </div>
+    </div>
+</body>
+<!-- Mirrored from themelooks.net/demo/dadmin/html/profile.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 08 Sep 2021 12:54:40 GMT -->
+</html>

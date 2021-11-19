@@ -1,0 +1,150 @@
+﻿@model Model.EF.PostCategory
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<link href="~/assets/css/TableTheme.css" rel="stylesheet" />
+<html>
+<body>
+    <div class="preloader"></div>
+    <div class="bootstrap snippets bootdey" style="padding:40px">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="main-box no-header clearfix">
+                    <div class="main-box-body clearfix">
+                        <div class="table-responsive">
+                            <dl class="dl-horizontal">
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.NameCate)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.NameCate)
+                                </dd>
+
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.Alias)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.Alias)
+                                </dd>
+
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.StoreID)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.StoreID)
+                                </dd>
+
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.Description)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.Description)
+                                </dd>
+
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.ParentID)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.ParentID)
+                                </dd>
+
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.DisplayOrder)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.DisplayOrder)
+                                </dd>
+
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.FontSize)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.FontSize)
+                                </dd>
+
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.FontAwesomeClass)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.FontAwesomeClass)
+                                </dd>
+
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.CreateDate)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.CreateDate)
+                                </dd>
+
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.CreatedBy)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.CreatedBy)
+                                </dd>
+
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.UpdatedDate)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.UpdatedDate)
+                                </dd>
+
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.UpdatedBy)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.UpdatedBy)
+                                </dd>
+
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.MetaKeyword)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.MetaKeyword)
+                                </dd>
+
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.MetaDescription)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.MetaDescription)
+                                </dd>
+
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.Status)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.Status)
+                                </dd>
+
+                            </dl>
+                        </div>
+                        <p>
+                            @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+                            @Html.ActionLink("Back to List", "Index")
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

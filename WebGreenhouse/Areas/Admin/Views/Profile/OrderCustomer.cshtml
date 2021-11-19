@@ -1,0 +1,216 @@
+﻿
+@{
+    ViewBag.Title = "OrderCustomer";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var list = ViewBag.post;
+    var user = (List<Model.EF.User>)ViewBag.user;
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from themezhub.net/rentup-live/rentup/my-property.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 25 Aug 2021 09:13:41 GMT -->
+<head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Themezhub" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Custom CSS -->
+    <link href="assets/css/styles.css" rel="stylesheet">
+
+</head>
+
+<body class="yellow-skin">
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader"></div>
+
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper">
+        <div class="clearfix"></div>
+        <!-- ============================================================== -->
+        <!-- Top header  -->
+        <!-- ============================================================== -->
+        <!-- ============================ Page Title Start================================== -->
+        <div class="page-title" style="background:#f4f4f4 url(assets/img/slider-5.jpg);" data-overlay="5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+
+                        <div class="breadcrumbs-wrap">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item active" aria-current="page">Đơn Hàng</li>
+                            </ol>
+                            <h2 class="breadcrumb-title">Các đơn hàng của tôi</h2>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ============================ Page Title End ================================== -->
+        <!-- ============================ User Dashboard ================================== -->
+        <section class="gray pt-5 pb-5">
+            <div class="container-fluid">
+                <div class="row">
+                    @foreach (var item in user)
+                    {
+                        <div class="col-lg-3 col-md-4 col-sm-12">
+                            <div class="property_dashboard_navbar">
+
+                                <div class="dash_user_avater">
+                                    <img src="~/assets/img/user-3.jpg" class="img-fluid avater" alt="">
+                                    <h4>@item.Name</h4>
+                                    Công Việc : <span>@item.MyWork</span>
+                                </div>
+
+                                <div class="dash_user_menues">
+                                    <ul>
+                                        <li><a href="/"><i class="fa fa-tachometer-alt"></i>Thông Tin Chí Tiết<span class="notti_coun style-1">4</span></a></li>
+                                        <li class="active"><a href="/home/profile"><i class="fa fa-user-tie"></i>Thông Tin</a></li>
+                                        <li><a href="/admin/profile/ordercustomer/@item.ID"><i class="fa fa-bookmark"></i>Đơn Hàng<span class="notti_coun style-2">7</span></a></li>
+                                        <li><a href="/posts/index/@item.ID"><i class="fa fa-tasks"></i>Bài Đăng Của Tôi</a></li>
+                                        <li><a href="messages.html"><i class="fa fa-envelope"></i>Tin Nhắn<span class="notti_coun style-3">3</span></a></li>
+                                        @*<li><a href="submit-property-dashboard.html"><i class="fa fa-pen-nib"></i>Submit New Property</a></li>*@
+                                        <li><a href="change-password.html"><i class="fa fa-unlock-alt"></i>Thay Đổi Mật Khẩu</a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="dash_user_footer">
+                                    <ul>
+                                        <li><a href="/home/logout"><i class="fa fa-power-off"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-comment"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-cog"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                        <div class="col-lg-9 col-md-8 col-sm-12">
+                            <div class="dashboard-body">
+
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12">
+                                        <div class="_prt_filt_dash">
+                                            <div class="_prt_filt_dash_flex">
+                                                <div class="foot-news-last">
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control" placeholder="Email Address">
+                                                        <div class="input-group-append">
+                                                            <span type="button" class="input-group-text theme-bg b-0 text-light"><i class="fas fa-search"></i></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="_prt_filt_dash_last m2_hide">
+                                                <div class="_prt_filt_radius">
+
+                                                </div>
+                                                <div class="_prt_filt_add_new">
+                                                    <a href="submit-property-dashboard.html" class="prt_submit_link"><i class="fas fa-plus-circle"></i><span class="d-none d-lg-block d-md-block">List New Property</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12">
+                                        <div class="dashboard_property">
+                                            <div class="table-responsive">
+                                                <table class="table">
+                                                    <thead class="thead-dark">
+                                                        <tr>
+                                                            <th scope="col">Thông tin sản phẩm</th>
+                                                            <th scope="col" class="m2_hide">Tên người mua</th>
+                                                            <th scope="col">Số điện thoại</th>
+                                                            <th scope="col">Email người mua</th>
+                                                            <th scope="col">Trạng thái</th>
+                                                            <th scope="col"></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        @foreach (var ch in list)
+                                                        {
+                                                            dynamic d = ch;
+                                                            var CustomerEmail = d.GetType().GetProperty("CustomerEmail").GetValue(d, null);
+                                                            var CustomerName = d.GetType().GetProperty("CustomerName").GetValue(d, null);
+                                                            var Name = d.GetType().GetProperty("Name").GetValue(d, null);
+                                                            var CustomerMobile = d.GetType().GetProperty("CustomerMobile").GetValue(d, null);
+                                                            var Status = d.GetType().GetProperty("Status").GetValue(d, null);
+                                                            var OrderID = d.GetType().GetProperty("OrderID").GetValue(d, null);
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="dash_prt_wrap">
+                                                                        <div class="_leads_status">@Name</div>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="m2_hide">
+                                                                    <div class="_leads_posted"><h5></h5></div>
+                                                                    <div class="_leads_view_title">
+                                                                        @CustomerName
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="_leads_status">@CustomerMobile</div>
+
+                                                                </td>
+                                                                <td>
+                                                                    <div class="_leads_status">@CustomerEmail</div>
+
+                                                                </td>
+                                                                <td>
+                                                                    <div class="_leads_action">
+                                                                        @if (Status == 1)
+                                                                        {
+                                                                            <div class="_leads_status"><span class="badge badge-warning" style="color:white">Đã liên hệ</span></div>
+                                                                        }
+                                                                        else if (Status == 0)
+                                                                        {
+                                                                            <div class="_leads_status"><span class="badge badge-danger">Chưa xác nhận</span></div>
+                                                                        }
+                                                                        else if (Status == 3)
+                                                                        {
+                                                                            <div class="_leads_status"><span class="badge badge-success">Bán thành công</span></div>
+                                                                        }
+                                                                        else
+                                                                        {
+                                                                            <div class="_leads_status"><span class="badge badge-secondary">Đã hủy</span></div>
+                                                                        }
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="_leads_action">
+                                                                        <a href="@Url.Action("OrderCustomer","Profile",new { orderid = OrderID , value = 1})"><i class="fas fa-check"></i></a>
+                                                                        <a href="@Url.Action("OrderCustomer","Profile",new { orderid = OrderID , value = 2})"><i class="fas fa-phone"></i></a>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+
+                                                        }
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- row -->
+
+                            </div>
+
+                        </div>
+
+                    </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+<!-- Mirrored from themezhub.net/rentup-live/rentup/my-property.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 25 Aug 2021 09:13:41 GMT -->
+</html>
+

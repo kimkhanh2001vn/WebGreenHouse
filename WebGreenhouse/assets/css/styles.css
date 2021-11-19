@@ -79,7 +79,7 @@ i.req {
 body {
 	background: #ffffff;
 	color:#72809D;
-	font-size:15px;
+	font-size:20px;
 	font-family: 'Muli', sans-serif;
 	margin: 0;
 	overflow-x: hidden !important;
@@ -94,7 +94,7 @@ a {
     color:#30384e;
     text-decoration: none;
     background-color: transparent;
-    -webkit-text-decoration-skip: objects;
+    webkit-text-decoration-skip: objects;
 }
 
 a:hover,
@@ -13138,6 +13138,17 @@ table.property-table-wrap .dashboard_propert_wrapper .title .table-property-pric
     margin-bottom: 3px;
     display: inline-flex;
 }
+._leads_status .locked {
+    padding: 3px 15px;
+    background: rgba(76, 175, 80,0.1);
+    border-radius: 50px;
+    font-size: 12px;
+    color: #e87373;
+    border: 1px solid rgba(76, 175, 80,0.2);
+    font-weight: 600;
+    margin-bottom: 3px;
+    display: inline-flex;
+}
 ._leads_status .expire {
     padding: 3px 15px;
     background: rgba(233, 30, 58,0.1);
@@ -15056,6 +15067,10 @@ h1, .h1 {
 		border-radius: 50%;
 	}
 	
+}
+
+.theme-bg .container .row .col-lg-12 .call_action_wrap a{
+    font-size:20px
 }
 
 

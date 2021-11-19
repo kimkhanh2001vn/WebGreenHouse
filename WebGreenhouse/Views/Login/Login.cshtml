@@ -1,0 +1,179 @@
+﻿@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Areas/Admin/Resources/assets/css/themLogin.css" rel="stylesheet" />
+@section Scripts{
+    <script src="~/Areas/Admin/Resources/assets/js/Controller/RegistrationController.js"></script>
+}
+<html>
+<body class="yellow-skin">
+    <div class="preloader"></div>
+    <div class="resp_log_caption">
+        @if (ViewBag.success != null)
+        {
+            <div class="form-group" id="messeger1">
+                <div id="successSow" class="alert alert-success alert-white rounded">
+                    <button type="button" data-dismiss="alert" aria-hidden="true" class="close">X</button>
+                    <div class="icon">
+                        <i class="fa fa-check"></i>
+                    </div>
+                    <strong>Thành Công ! </strong>
+                    Đăng Ký Thành Công ! Mời Bạn Đăng Nhập.
+                </div>
+            </div>
+        }
+        else if (ViewBag.err != null)
+        {
+            <div class=" form-group" id="messeger2">
+                <div id="successSow" class="alert alert-warning alert-white rounded">
+                    <button type="button" data-dismiss="alert" aria-hidden="true" class="close">X</button>
+                    <div class="icon">
+                        <i class="fa fa-times-circle"></i>
+                    </div>
+                    <strong>Thất Bại ! </strong>
+                    Hãy Điền Đầy Đủ Thông Tin. Đăng Ký Lại !
+                </div>
+            </div>
+        }
+        else
+        {
+            <div></div>
+        }
+        <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="pills-login-tab">
+                <div class="login-form">
+                    <!--Login-->
+                    <div class="container">
+                        <div class="row">
+                            <p class="success"></p>
+                            <div class="col-md-11 mt-60 mx-md-auto">
+                                <div class="login-box bg-white pl-lg-5 pl-0">
+                                    <div class="row no-gutters align-items-center">
+                                        <div>
+                                            <span class="badge badge-success">@ViewBag.success</span>
+                                        </div>
+                                        <div class="col-md-6">
+
+                                            <div class="form-wrap bg-white">
+                                                <h4 class="btm-sep pb-3">Đăng Nhập</h4>
+                                                @using (Html.BeginForm("Login", "Login", FormMethod.Post))
+                                                {
+                                                    @Html.AntiForgeryToken()
+                                                    <div class="row">
+                                                        <p>@Html.ValidationSummary(true, null, new { @class = "alert alert-danger" })</p>
+                                                        <div class="col-12">
+                                                            <div class="form-group position-relative">
+                                                                <span class="zmdi zmdi-account"></span>
+                                                                <input type="text" class="form-control" id="logUsername" name="username" placeholder="Tên Đăng Nhập" required>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <div class="form-group position-relative">
+                                                                <span class="zmdi zmdi-eye-off"></span>
+                                                                <input type="password" class="form-control" id="logPass" name="password" placeholder="Mật Khẩu" required>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 text-lg-right">
+                                                            <a href="/login/forgotpassword" class="c-black">Quên Mật Khẩu ?</a>
+                                                        </div>
+                                                        <div class="col-12 mt-30">
+                                                            <button type="submit" id="submit" class="btn btn-lg btn-custom btn-dark btn-block">
+                                                                Đăng Nhập
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                }
+                                            </div>
+                                        </div>
+                                        <div class=" col-md-6">
+                                            <div class="content text-center">
+                                                <div class="container border-bottom pb-5 mb-5">
+                                                    <h4 class="c-black">Nếu Bạn Chưa Có Tài Khoản, Đăng Ký Ngay?</h4>
+                                                    <a class="btn btn-success" id="pills-signup-tab" data-toggle="pill" href="#pills-signup" role="tab" aria-controls="pills-signup" aria-selected="false"><i class="fas fa-user-plus mr-2"></i>Đăng Ký</a>
+                                                </div>
+                                                <h5 class="c-black mb-4 mt-n1">Or Sign In With</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="pills-signup" role="tabpanel" aria-labelledby="pills-signup-tab">
+                <div class="container login-form">
+                    <form action="~/" method="post">
+                        <p class="noticafition "></p>
+                        <p class="confin"></p>
+                        <p class="empty"></p>
+                        <div class="form-group">
+                            <label>Họ Và Tên</label>
+                            <div class="input-with-icon">
+                                <input type="text" id="CustomerName" name="CustomerName" class="form-control" placeholder="Họ và tên..." required>
+                                <i class="ti-user"></i>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Tên Đăng Nhập</label>
+                            <div class="input-with-icon">
+                                <input type="text" id="UserNameRes" name="UserName" class="form-control" placeholder="Tên Đăng Nhập..." required>
+                                <i class="fa fa-user"></i>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <div class="input-with-icon">
+                                <input type="email" id="CustomerEmail" name="CustomerEmail" class="form-control" placeholder="Địa chỉ email..." required title="Nhập đúng định dạng email">
+                                <i class="fa fa-envelope"></i>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Địa Chỉ</label>
+                            <div class="input-with-icon">
+                                <input type="text" id="CustomerAddress" name="CustomerAddress" class="form-control" placeholder="Địa chỉ..." required>
+                                <i class="fa fa-map-pin"></i>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Công Việc</label>
+                            <div class="input-with-icon">
+                                <input type="text" id="CustomerWork" name="CustomerWork" class="form-control" placeholder="Công việc hiện tại..." required>
+                                <i class="fa fa-paste"></i>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Số Điện Thoại</label>
+                            <div class="input-with-icon">
+                                <input type="number" id="numberphone" name="numberphone" class="form-control" placeholder="Số điện thoại..." required>
+                                <i class="fa fa-tablet"></i>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Mật Khẩu</label>
+                            <div class="input-with-icon">
+                                <input type="password" id="PassWord" name="ConfirmPassWord" class="fwb form-control" placeholder="Mật khẩu..." required title="Mật khẩu phải chứa tối thiểu 8 ký tự  1 chữ cái và 1 số">
+                                <i class="fa fa-unlock"></i>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Xác Nhận Mật Khẩu</label>
+                            <div class="input-with-icon">
+                                <input type="password" id="ConfirmPassWord" name="PassWord" class="confinfwb form-control" placeholder="Xác Nhật Lại Mật khẩu..." required title="Mật khẩu phải chứa tối thiểu 8 ký tự  1 chữ cái và 1 số">
+                                <i class="fa fa-unlock"></i>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button type="button" id="btnregistration" class="btn btn-md full-width pop-login">Đăng Ký</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+

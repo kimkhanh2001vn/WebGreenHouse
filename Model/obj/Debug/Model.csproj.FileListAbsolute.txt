@@ -1,0 +1,16 @@
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\Model\bin\Debug\Model.dll.config
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\Model\bin\Debug\Model.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\Model\bin\Debug\Model.pdb
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\Model\bin\Debug\EntityFramework.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\Model\bin\Debug\PagedList.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\Model\bin\Debug\PagedList.Mvc.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\Model\bin\Debug\EntityFramework.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\Model\bin\Debug\PagedList.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\Model\bin\Debug\PagedList.Mvc.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\Model\obj\Debug\Model.csproj.AssemblyReference.cache
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\Model\obj\Debug\Model.csproj.CopyComplete
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\Model\obj\Debug\Model.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\Model\obj\Debug\Model.pdb

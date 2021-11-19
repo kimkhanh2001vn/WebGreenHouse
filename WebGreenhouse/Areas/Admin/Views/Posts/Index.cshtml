@@ -1,0 +1,157 @@
+﻿@using Model.EF
+@using PagedList.Mvc;
+@model IEnumerable<Model.EF.Post>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+    var list = (PagedList.PagedList<Post>)ViewBag.model;
+
+
+}
+<link href="~/assets/css/TableTheme.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+<style>
+    .font-with p {
+        width: 275px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+</style>
+
+<html>
+<body>
+    <div class="preloader"></div>
+    <div class="bootstrap snippets bootdey" style="padding:40px">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="main-box no-header clearfix">
+                    <div class="main-box-body clearfix">
+                        <div class="row">
+                            <div class="label col-lg-4" style="margin-bottom:15px">
+                                <a href="~/Admin/Posts/create" class="btn btn-danger">Tạo Mới</a>
+                            </div>
+                            <div class="col-lg-8">
+                                <form action="~/admin/posts/index" method="get">
+                                    <div class="input-group">
+                                        <input type="search" placeholder="Nhập từ bạn cần tìm?" aria-describedby="button-addon1" name="searchString" class="form-control border-0 bg-light">
+                                        <div class="input-group-append">
+                                            <button id="button-addon1" type="submit" class="btn btn-link text-primary"><i class="fa fa-search"></i></button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>                        
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tr>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Images)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.PostCategory.NameCate)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Name)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.HomeFlag)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.CreatedByID)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.CreateDate)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Status)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Address)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Price)
+                                    </th>
+                                    <th></th>
+                                </tr>
+
+                                @foreach (var item in list)
+                                {
+                                    <tr>
+                                        <td>
+                                            <img class="image-banner" src="@item.Images" height="100" width="100" />
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.PostCategory.NameCate)
+                                        </td>
+                                        <td class="font-with">
+                                            <p>@Html.DisplayFor(modelItem => item.Name)</p>
+                                        </td>
+
+                                        <td>
+                                            @if (item.HomeFlag == true)
+                                            {
+                                                <p class="label label-blue">Bán</p>
+                                            }
+                                            else
+                                            {
+                                                <p class="label label-red">Thuê</p>
+                                            }
+                                        </td>
+                                        <th>
+                                            @Html.DisplayFor(model => item.User.Name)
+                                        </th>
+                                        <td>
+                                            @Html.FormatValue(item.CreateDate, "{0:dd/MM/yyyy}")
+                                        </td>
+                                        <td>
+                                            @if (item.Status == true)
+                                            {
+                                                <p class="label label-success">Kích Hoạt</p>
+                                            }
+                                            else
+                                            {
+                                                <p class="label label-danger">Khóa</p>
+                                            }
+                                        </td>
+                                        <td class="font-with">
+                                            <p>@Html.DisplayFor(modelItem => item.Address)</p>
+                                        </td>
+                                        <td>
+                                            @Html.FormatValue(item.Price, "{0:#,##0}")
+                                        </td>
+                                        <td>
+                                            <a href="@Url.Action("Edit","Posts",new { id = item.ID})"><i class="fa fa-edit"></i></a>
+                                            <a href="@Url.Action("Details","Posts",new { id = item.ID})"><i class="fa fa-sliders-h"></i></a>
+                                            <a href="@Url.Action("Delete","Posts",new { id = item.ID})"><i class="fa fa-times-circle"></i></a>
+                                        </td>
+                                    </tr>
+                                }
+
+                            </table>
+                            <div class="number">
+                                Trang @(list.PageCount<list.PageNumber?0:list.PageNumber) of @list.PageCount
+                            </div>
+                            <div class="menutrang">
+                                @Html.PagedListPager(list, page => Url.Action("Index", new { page = page }))
+                            </div>
+                            <style>
+                                .menutrang {
+                                    display: inline;
+                                    text-align: center;
+                                    padding: 0 5px 0 5px;
+                                }
+
+                                .number {
+                                    padding-left: 8px;
+                                }
+                            </style>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

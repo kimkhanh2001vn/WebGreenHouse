@@ -1,0 +1,68 @@
+﻿@model  WebGreenhouse.Models.LoginModel
+@{
+    Layout = null;
+}
+<html dir="ltr" lang="en" class="no-outlines">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard - DAdmin</title>
+    <link rel="stylesheet" href="~/Areas/Admin/Resources/assets/css/datatables.min.css">
+    <link rel="stylesheet" href="~/Areas/Admin/Resources/assets/css/style.css">
+    <link href="~/assets/css/LoginTheme.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="m-account-w" >
+        <div class="m-account">
+            <div class="row no-gutters">
+                    <div class="m-account--form-w">
+                        <div class="m-account--form">
+                            <div class="logo">
+                                <img src="~/Areas/Admin/Resources/assets/img/icons8_house_with_garden_48.png" alt=""> <span style="font-size:25px">ADMIN - GreenHouse</span>
+                            </div>
+                            <div class="container bootstrap snippets bootdey">
+                                <div class="row login-page">
+                                    <div class="col-md-4 col-lg-4 col-md-offset-4 col-lg-offset-4">
+                                        @using (Html.BeginForm("Login", "Login", FormMethod.Post, new { @class = "ng-pristine ng-valid", @role = " Form" }))
+                                        {
+                                            @Html.AntiForgeryToken()
+
+                                            <div class="form-content">
+                                                <div class="form-group" >
+                                                    <div class="alert alert-warning alert-white rounded">
+                                                        <div class="icon">
+                                                            <i class="fa fa-times-circle"></i>
+                                                        </div>
+                                                        @Html.ValidationSummary(true, null, new { @class = "alert alert-danger" })
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    @*<input type="text" class="form-control input-underline input-lg" placeholder="Email">*@
+                                                    @Html.TextBoxFor(model => model.UserName, new { @class = "form-control input-underline input-lg", @placeholder = "Email" })
+                                                </div>
+                                                <div class="form-group">
+                                                    @*<input type="password" class="form-control input-underline input-lg" placeholder="Password">*@
+                                                    @Html.PasswordFor(model => model.PassWord, new { @class = "form-control input-underline input-lg", @placeholder = "Password" })
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="checkbox">
+                                                        <label>
+                                                            @Html.CheckBoxFor(model => model.RememberMe) Nhớ Mật Khẩu
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <button class="btn btn-info btn-lg" style="width:100%">
+                                                Log in
+                                            </button>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+            </div>
+        </div>
+    </div>
+</body>
+</html>

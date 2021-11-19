@@ -1,0 +1,175 @@
+﻿@using WebGreenhouse.Common
+@{
+    WebGreenhouse.Common.UserLogin loginModel = (WebGreenhouse.Common.UserLogin)Session[CommonStants.User_Session];
+}
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Dashboard - GreenHouse</title>
+    <link rel="icon" href="~/Areas/Admin/Resources/assets/img/icons8_house_with_garden_48.png">
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700%7CMontserrat:400,500">
+    <link rel="stylesheet" href="~/Areas/Admin/Resources/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Areas/Admin/Resources/assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="~/Areas/Admin/Resources/assets/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="~/Areas/Admin/Resources/assets/css/perfect-scrollbar.min.css">
+    <link rel="stylesheet" href="~/Areas/Admin/Resources/assets/css/morris.min.css">
+    <link rel="stylesheet" href="~/Areas/Admin/Resources/assets/css/select2.min.css">
+    <link rel="stylesheet" href="~/Areas/Admin/Resources/assets/css/jquery-jvectormap.min.css">
+    <link rel="stylesheet" href="~/Areas/Admin/Resources/assets/css/horizontal-timeline.min.css">
+    <link rel="stylesheet" href="~/Areas/Admin/Resources/assets/css/weather-icons.min.css">
+    <link rel="stylesheet" href="~/Areas/Admin/Resources/assets/css/dropzone.min.css">
+    <link rel="stylesheet" href="~/Areas/Admin/Resources/assets/css/ion.rangeSlider.min.css">
+    <link rel="stylesheet" href="~/Areas/Admin/Resources/assets/css/ion.rangeSlider.skinFlat.min.css">
+    <link rel="stylesheet" href="~/Areas/Admin/Resources/assets/css/datatables.min.css">
+    <link rel="stylesheet" href="~/Areas/Admin/Resources/assets/css/fullcalendar.min.css">
+    <link rel="stylesheet" href="~/Areas/Admin/Resources/assets/css/style.css">
+    <link href="~/Areas/Admin/Resources/PagedList.css" rel="stylesheet" />
+</head>
+<body>
+    <header class="navbar navbar-fixed">
+        <div class="navbar--header"> <a href="/admin/home/index" class="logo"> <img src="~/Areas/Admin/Resources/assets/img/icons8_house_with_garden_48.png" alt=""><span style="font-size:18px">Admin - GreenHouse</span></a> <a href="#" class="navbar--btn" data-toggle="sidebar" title="Toggle Sidebar"> <i class="fa fa-bars"></i> </a> </div>
+        <a href="#" class="navbar--btn" data-toggle="sidebar" title="Toggle Sidebar"> <i class="fa fa-bars"></i> </a>
+        <div class="navbar--search">
+            <form action=""> <input type="search" name="search" class="form-control" placeholder="Search Something..." required> <button class="btn-link"><i class="fa fa-search"></i></button> </form>
+        </div>
+        <div class="navbar--nav ml-auto">
+            <ul class="nav">
+                <li class="nav-item"> <a href="#" class="nav-link"> <i class="fa fa-bell"></i> <span class="badge text-white bg-blue">7</span> </a> </li>
+                <li class="nav-item"> <a href="mailbox_inbox.html" class="nav-link"> <i class="fa fa-envelope"></i> <span class="badge text-white bg-blue">4</span> </a> </li>
+                <li class="nav-item dropdown nav-language">
+                    <a href="#" class="nav-link" data-toggle="dropdown"> <img src="~/Areas/Admin/Resources/assets/img/flags/us.png" alt=""> <span>English</span> <i class="fa fa-angle-down"></i> </a>
+                    <ul class="dropdown-menu">
+                        <li> <a href="#"> <img src="~/Areas/Admin/Resources/assets/img/flags/de.png" alt=""> <span>German</span> </a> </li>
+                        <li> <a href="#"> <img src="~/Areas/Admin/Resources/assets/img/flags/fr.png" alt=""> <span>French</span> </a> </li>
+                        <li> <a href="#"> <img src="~/Areas/Admin/Resources/assets/img/flags/us.png" alt=""> <span>English</span> </a> </li>
+                    </ul>
+                </li>
+                <!--Profile-->>
+                @if (loginModel != null)
+                {
+                    <li class="nav-item dropdown nav--user online">
+                        <a href="/Admin/Profile/Profile/@loginModel.UserID" class="nav-link" data-toggle="dropdown"> <img src="~/Areas/Admin/Resources/assets/img/avatars/01_80x80.png" alt="" class="rounded-circle"> <span>@loginModel.Name</span> <i class="fa fa-angle-down"></i> </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/Admin/Profile/Profile/@loginModel.UserID"><i class="far fa-user"></i>Hồ Sơ</a></li>
+                            <li><a href="mailbox_inbox.html"><i class="far fa-envelope"></i>Tin Nhắn</a></li>
+                            <li><a href="#"><i class="fa fa-cog"></i>Cài Đặt</a></li>
+                            <li class="dropdown-divider"></li>
+                            <li><a href="lock-screen.html"><i class="fa fa-lock"></i>Đổi Mật Khẩu</a></li>
+                            <li><a href="@Url.Action("Logout", "Login")"><i class="fa fa-power-off"></i>Thoát</a></li>
+                        </ul>
+                    </li>
+                }
+            </ul>
+        </div>
+    </header>
+    <aside class="sidebar" data-trigger="scrollbar">
+        @if (loginModel != null)
+        {
+            <div class="sidebar--profile">
+                <div class="profile--img"> <a href="#"> <img src="~/Areas/Admin/Resources/assets/img/avatars/01_80x80.png" alt="" class="rounded-circle"> </a> </div>
+                <div class="profile--name"> <a href="/Admin/Profile/Profile/@loginModel.UserID" class="btn-link">@loginModel.Name</a> </div>
+                <div class="profile--nav">
+                    <ul class="nav">
+                        <li class="nav-item"> <a href="/Admin/Profile/Profile/@loginModel.UserID" class="nav-link" title="User Profile"> <i class="fa fa-user"></i> </a> </li>
+                        <li class="nav-item"> <a href="lock-screen.html" class="nav-link" title="Lock Screen"> <i class="fa fa-lock"></i> </a> </li>
+                        <li class="nav-item"> <a href="mailbox_inbox.html" class="nav-link" title="Messages"> <i class="fa fa-envelope"></i> </a> </li>
+                        <li class="nav-item"> <a href="@Url.Action("Logout", "Login")" class="nav-link" title="Logout"> <i class="fa fa-sign-out-alt"></i> </a> </li>
+                    </ul>
+                </div>
+            </div>
+        }
+        <div class="sidebar--nav">
+            <ul>
+                <li>
+                    <ul>
+                        <li class="active"> <a href="/admin/home/index"> <i class="fa fa-home"></i> <span>Trang Chủ</span> </a> </li>
+                        <li>
+                            <a href="#"> <i class="fa fa-id-card"></i> <span>Nhân Viên Công Ty</span> </a>
+                            <ul>
+                                <li><a href="/Admin/Users/index">Danh Sách Nhân Viên</a></li>
+                                @*<li><a href="products.html">Products</a></li>
+                                <li><a href="products-edit.html">Edit Products</a></li>*@
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"> <i class="fa fa-street-view"></i> <span>Khách Hàng</span> </a>
+                            <ul>
+                                <li><a href="/Admin/customers/index">Danh Sách Khách Hàng</a></li>
+                                <li><a href="#">Khách Hàng Thân Thiết</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Trang Chính</a>
+                    <ul>
+                        <li>
+                            <a href="#"> <i class="fa fa-th"></i> <span>Quản Lý Nội Dung</span> </a>
+                            <ul>
+                                <li><a href="#">Phần Đầu Trang</a></li>
+                                <li><a href="#">Phần Cuối Trang</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"> <i class="fa fa-th-list"></i> <span>Quản Lý Đánh Giá</span> </a>
+                            <ul>
+                                <li><a href="#">Người dùng đánh giá</a></li>
+                                <li><a href="#">Footer Dark</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Quản Lý Chính</a>
+                    <ul>
+                        <li>
+                            <a href="#"> <i class="far fa-newspaper"></i> <span>Bài Đăng Sản Phẩm</span> </a>
+                            <ul>
+                                <li><a href="/admin/postcategories/index">Quản Lý Tỉnh Thành</a></li>
+                                <li><a href="/admin/posts/index">Quản Lý Chi tiết</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"> <i class="fab fa-wpforms"></i> <span>Đơn Hàng</span> </a>
+                            <ul>
+                                <li><a href="/admin/orders/index">Quản lý Đơn Hàng</a></li>
+                                <li><a href="/admin/orderdetails/index">Chi Tiết Đơn Hàng</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+    </aside>
+    <div>
+        <main class="main--container">
+            @RenderBody()
+            <footer class="main--footer main--footer-light">
+                <p>Copyright &copy; <a href="#">DAdmin</a>. All Rights Reserved.</p>
+            </footer>
+        </main>
+    </div>
+</body>
+</html>
+<script src="~/Areas/Admin/Resources/assets/js/jquery.min.js"></script>
+<script src="~/Areas/Admin/Resources/assets/js/jquery-ui.min.js"></script>
+<script src="~/Areas/Admin/Resources/assets/js/bootstrap.bundle.min.js"></script>
+<script src="~/Areas/Admin/Resources/assets/js/perfect-scrollbar.min.js"></script>
+<script src="~/Areas/Admin/Resources/assets/js/jquery.sparkline.min.js"></script>
+<script src="~/Areas/Admin/Resources/assets/js/raphael.min.js"></script>
+<script src="~/Areas/Admin/Resources/assets/js/morris.min.js"></script>
+<script src="~/Areas/Admin/Resources/assets/js/select2.min.js"></script>
+<script src="~/Areas/Admin/Resources/assets/js/jquery-jvectormap.min.js"></script>
+<script src="~/Areas/Admin/Resources/assets/js/jquery-jvectormap-world-mill.min.js"></script>
+<script src="~/Areas/Admin/Resources/assets/js/horizontal-timeline.min.js"></script>
+<script src="~/Areas/Admin/Resources/assets/js/jquery.validate.min.js"></script>
+<script src="~/Areas/Admin/Resources/assets/js/jquery.steps.min.js"></script>
+<script src="~/Areas/Admin/Resources/assets/js/dropzone.min.js"></script>
+<script src="~/Areas/Admin/Resources/assets/js/ion.rangeSlider.min.js"></script>
+<script src="~/Areas/Admin/Resources/assets/js/datatables.min.js"></script>
+<script src="~/Areas/Admin/Resources/assets/js/main.js"></script>

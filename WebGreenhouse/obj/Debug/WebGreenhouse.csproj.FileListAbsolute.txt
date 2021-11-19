@@ -1,82 +1,5 @@
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\WebGreenhouse.dll.config
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\WebGreenhouse.dll
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\WebGreenhouse.pdb
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\csc.exe
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\csc.exe.config
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\csc.rsp
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\csi.exe
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\csi.exe.config
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\csi.rsp
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\Microsoft.CodeAnalysis.dll
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\Microsoft.CSharp.Core.targets
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\Microsoft.Managed.Core.targets
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\Microsoft.VisualBasic.Core.targets
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\Microsoft.Win32.Primitives.dll
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\System.AppContext.dll
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\System.Collections.Immutable.dll
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\System.Console.dll
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\System.Diagnostics.StackTrace.dll
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\System.Globalization.Calendars.dll
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\System.IO.Compression.dll
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\System.IO.Compression.ZipFile.dll
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\System.IO.FileSystem.dll
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\System.IO.FileSystem.Primitives.dll
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\System.Net.Http.dll
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\System.Net.Sockets.dll
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\System.Reflection.Metadata.dll
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\System.Security.Cryptography.Algorithms.dll
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\System.Security.Cryptography.Encoding.dll
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\System.Security.Cryptography.Primitives.dll
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\System.Text.Encoding.CodePages.dll
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\System.Threading.Tasks.Extensions.dll
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\System.ValueTuple.dll
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\System.Xml.ReaderWriter.dll
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\System.Xml.XmlDocument.dll
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\System.Xml.XPath.dll
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\System.Xml.XPath.XDocument.dll
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\vbc.exe
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\vbc.exe.config
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\vbc.rsp
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\VBCSCompiler.exe
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\Antlr3.Runtime.dll
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\Newtonsoft.Json.dll
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\System.Web.Helpers.dll
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\System.Web.Mvc.dll
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\System.Web.Optimization.dll
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\System.Web.Razor.dll
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\System.Web.WebPages.Deployment.dll
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\System.Web.WebPages.dll
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\System.Web.WebPages.Razor.dll
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\WebGrease.dll
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\System.Web.Helpers.xml
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\System.Web.Mvc.xml
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\System.Web.Optimization.xml
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\System.Web.Razor.xml
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\System.Web.WebPages.xml
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\System.Web.WebPages.Deployment.xml
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\System.Web.WebPages.Razor.xml
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\Newtonsoft.Json.xml
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\Antlr3.Runtime.pdb
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\obj\Debug\WebGreenhouse.csproj.AssemblyReference.cache
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\obj\Debug\WebGreenhouse.csproj.CoreCompileInputs.cache
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\obj\Debug\WebGreenhouse.csproj.CopyComplete
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\obj\Debug\WebGreenhouse.dll
-C:\Users\Admin\Desktop\WebGreenhouse\WebGreenhouse\obj\Debug\WebGreenhouse.pdb
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.DiaSymReader.Native.amd64.dll
 C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\WebGreenhouse.dll.config
 C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\WebGreenhouse.dll
 C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\WebGreenhouse.pdb
@@ -97,42 +20,103 @@ C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\Microsoft.
 C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
 C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\Microsoft.Managed.Core.targets
 C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\Microsoft.VisualBasic.Core.targets
-C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\Microsoft.Win32.Primitives.dll
-C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\System.AppContext.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\System.Buffers.dll
 C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\System.Collections.Immutable.dll
-C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\System.Console.dll
-C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
-C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
-C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\System.Diagnostics.StackTrace.dll
-C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\System.Globalization.Calendars.dll
-C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\System.IO.Compression.dll
-C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\System.IO.Compression.ZipFile.dll
-C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\System.IO.FileSystem.dll
-C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\System.IO.FileSystem.Primitives.dll
-C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\System.Net.Http.dll
-C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\System.Net.Sockets.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\System.Memory.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\System.Numerics.Vectors.dll
 C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\System.Reflection.Metadata.dll
-C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
-C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\System.Security.Cryptography.Algorithms.dll
-C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\System.Security.Cryptography.Encoding.dll
-C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\System.Security.Cryptography.Primitives.dll
-C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\System.Text.Encoding.CodePages.dll
 C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\System.Threading.Tasks.Extensions.dll
-C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\System.ValueTuple.dll
-C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\System.Xml.ReaderWriter.dll
-C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\System.Xml.XmlDocument.dll
-C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\System.Xml.XPath.dll
-C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\System.Xml.XPath.XDocument.dll
 C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\vbc.exe
 C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\vbc.exe.config
 C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\vbc.rsp
 C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\VBCSCompiler.exe
 C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Antlr3.Runtime.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\EntityFramework.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\EntityFramework.SqlServer.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.AspNetCore.Antiforgery.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.AspNetCore.Authentication.Abstractions.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.AspNetCore.Authentication.Core.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.AspNetCore.Authorization.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.AspNetCore.Authorization.Policy.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.AspNetCore.DataProtection.Abstractions.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.AspNetCore.DataProtection.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.AspNetCore.Diagnostics.Abstractions.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.AspNetCore.Hosting.Abstractions.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.AspNetCore.Html.Abstractions.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.AspNetCore.Http.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.AspNetCore.Http.Extensions.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.AspNetCore.Metadata.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.AspNetCore.Mvc.Abstractions.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.AspNetCore.Mvc.Core.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.AspNetCore.Mvc.DataAnnotations.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.AspNetCore.Mvc.Formatters.Json.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.AspNetCore.Mvc.Razor.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.AspNetCore.Mvc.ViewFeatures.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.AspNetCore.Razor.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.AspNetCore.Razor.Language.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.AspNetCore.Razor.Runtime.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.AspNetCore.ResponseCaching.Abstractions.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.AspNetCore.Routing.Abstractions.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.AspNetCore.Routing.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.AspNetCore.WebUtilities.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.CodeAnalysis.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.CodeAnalysis.Razor.dll
 C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.Extensions.DependencyModel.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.Extensions.FileProviders.Composite.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.Extensions.Localization.Abstractions.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.Extensions.Localization.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.Extensions.ObjectPool.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.Extensions.Options.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.Extensions.Primitives.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.Extensions.WebEncoders.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.Net.Http.Headers.dll
 C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.Win32.Registry.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Model.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Newtonsoft.Json.Bson.dll
 C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Newtonsoft.Json.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\PagedList.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\PagedList.Mvc.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\System.Buffers.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\System.Collections.Immutable.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\System.ComponentModel.Annotations.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\System.IO.Pipelines.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\System.Memory.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\System.Numerics.Vectors.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\System.Reflection.Metadata.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\System.Security.AccessControl.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\System.Security.Cryptography.Xml.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\System.Security.Permissions.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\System.Security.Principal.Windows.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\System.Text.Encoding.CodePages.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\System.Text.Encodings.Web.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\System.Text.Json.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\System.Threading.Tasks.Extensions.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\System.ValueTuple.dll
 C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\System.Web.Helpers.dll
 C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\System.Web.Mvc.dll
 C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\System.Web.Optimization.dll
@@ -141,6 +125,88 @@ C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\System.Web.WebPag
 C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\System.Web.WebPages.dll
 C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\System.Web.WebPages.Razor.dll
 C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\WebGrease.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Model.pdb
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Model.dll.config
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\EntityFramework.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\EntityFramework.SqlServer.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.AspNetCore.Antiforgery.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.AspNetCore.Authentication.Abstractions.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.AspNetCore.Authentication.Core.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.AspNetCore.Authorization.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.AspNetCore.Authorization.Policy.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.AspNetCore.Cryptography.Internal.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.AspNetCore.DataProtection.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.AspNetCore.DataProtection.Abstractions.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.AspNetCore.Diagnostics.Abstractions.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.AspNetCore.Hosting.Abstractions.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.AspNetCore.Hosting.Server.Abstractions.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.AspNetCore.Html.Abstractions.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.AspNetCore.Http.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.AspNetCore.Http.Abstractions.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.AspNetCore.Http.Extensions.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.AspNetCore.Http.Features.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.AspNetCore.JsonPatch.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.AspNetCore.Metadata.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.AspNetCore.Mvc.Abstractions.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.AspNetCore.Mvc.Core.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.AspNetCore.Mvc.DataAnnotations.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.AspNetCore.Mvc.Formatters.Json.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.AspNetCore.Mvc.Razor.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.AspNetCore.Mvc.ViewFeatures.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.AspNetCore.Razor.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.AspNetCore.Razor.Runtime.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.AspNetCore.ResponseCaching.Abstractions.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.AspNetCore.Routing.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.AspNetCore.Routing.Abstractions.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.AspNetCore.WebUtilities.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.CodeAnalysis.pdb
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.CodeAnalysis.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.CodeAnalysis.CSharp.pdb
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.CodeAnalysis.CSharp.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.DotNet.PlatformAbstractions.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.Extensions.Caching.Abstractions.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.Extensions.Caching.Memory.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.Extensions.Configuration.Abstractions.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.Extensions.DependencyInjection.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.Extensions.DependencyModel.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.Extensions.FileProviders.Abstractions.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.Extensions.FileProviders.Composite.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.Extensions.FileSystemGlobbing.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.Extensions.Hosting.Abstractions.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.Extensions.Localization.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.Extensions.Localization.Abstractions.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.Extensions.ObjectPool.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.Extensions.Options.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.Extensions.Primitives.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.Extensions.WebEncoders.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.Net.Http.Headers.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.Win32.Registry.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Newtonsoft.Json.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Newtonsoft.Json.Bson.pdb
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Newtonsoft.Json.Bson.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\PagedList.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\PagedList.Mvc.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\System.Buffers.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\System.Collections.Immutable.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\System.IO.Pipelines.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\System.Memory.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\System.Numerics.Vectors.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\System.Reflection.Metadata.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\System.Security.AccessControl.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\System.Security.Cryptography.Xml.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\System.Security.Permissions.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\System.Security.Principal.Windows.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\System.Text.Encoding.CodePages.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\System.Text.Encodings.Web.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\System.Text.Json.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\System.Threading.Tasks.Extensions.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\System.ValueTuple.xml
 C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\System.Web.Helpers.xml
 C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\System.Web.Mvc.xml
 C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\System.Web.Optimization.xml
@@ -148,10 +214,35 @@ C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\System.Web.Razor.
 C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\System.Web.WebPages.xml
 C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\System.Web.WebPages.Deployment.xml
 C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\System.Web.WebPages.Razor.xml
-C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Newtonsoft.Json.xml
 C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Antlr3.Runtime.pdb
-C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\cs\Microsoft.CodeAnalysis.resources.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\de\Microsoft.CodeAnalysis.resources.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\es\Microsoft.CodeAnalysis.resources.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\fr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\it\Microsoft.CodeAnalysis.resources.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\ja\Microsoft.CodeAnalysis.resources.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\ko\Microsoft.CodeAnalysis.resources.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\pl\Microsoft.CodeAnalysis.resources.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\pt-BR\Microsoft.CodeAnalysis.resources.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\ru\Microsoft.CodeAnalysis.resources.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\tr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\bin\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
 C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\obj\Debug\WebGreenhouse.csproj.AssemblyReference.cache
+C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\obj\Debug\WebGreenhouse.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\obj\Debug\WebGreenhouse.csproj.CoreCompileInputs.cache
 C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\obj\Debug\WebGreenhouse.csproj.CopyComplete
 C:\Users\NGO KIM KHANH\Desktop\WebGreenhouse\WebGreenhouse\obj\Debug\WebGreenhouse.dll

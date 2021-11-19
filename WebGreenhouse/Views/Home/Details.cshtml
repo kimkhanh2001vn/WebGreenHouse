@@ -1,0 +1,462 @@
+﻿@using Model.EF
+@using WebGreenhouse.Common
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var list = ViewBag.Post;
+    var user = ViewBag.User;
+    var gerenal = ViewBag.ListG;
+    var commnet = ViewBag.comment;
+    var db = new GreenHouseDB();
+}
+
+<html lang="en">
+
+<!-- Mirrored from themezhub.net/rentup-live/rentup/single-property-1.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 25 Aug 2021 09:13:42 GMT -->
+<head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Themezhub" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>RentUP - Residence & Real Estate Template</title>
+    <link href="~/assets/css/Comment.css" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body class="yellow-skin">
+
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader"></div>
+
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper">
+        <div class="clearfix"></div>
+        <section class="gallery_parts pt-2 pb-2 d-none d-sm-none d-md-none d-lg-none d-xl-block">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-8 col-md-7 col-sm-12 pr-1">
+                        <div class="gg_single_part left"><a href="#" class="mfp-gallery"><img src="~/assets/img/p-2.png" class="img-fluid mx-auto" alt="" /></a></div>
+                    </div>
+                    <div class="col-lg-4 col-md-5 col-sm-12 pl-1">
+                        <div class="gg_single_part-right min"><a href="~/assets/img/p-5.png" class="mfp-gallery"><img src="~/assets/img/p-5.png" class="img-fluid mx-auto" alt="" /></a></div>
+                        <div class="gg_single_part-right min mt-2 mb-2"><a href="~/assets/img/p-3.png" class="mfp-gallery"><img src="~/assets/img/p-3.png" class="img-fluid mx-auto" alt="" /></a></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="featured_slick_gallery gray d-block d-md-block d-lg-block d-xl-none">
+            <div class="featured_slick_gallery-slide">
+                <div class="featured_slick_padd"><a href="~/assets/img/slider-2.jpg" class="mfp-gallery"><img src="~/assets/img/slider-2.jpg" class="img-fluid mx-auto" alt="" /></a></div>
+                <div class="featured_slick_padd"><a href="~/assets/img/slider-3.jpg" class="mfp-gallery"><img src="~/assets/img/slider-3.jpg" class="img-fluid mx-auto" alt="" /></a></div>
+            </div>
+        </div>
+        <!-- ============================ Hero Banner End ================================== -->
+        <!-- ============================ Property Detail Start ================================== -->
+        <section class="pt-4">
+            <div class="container">
+                <div class="row">
+
+                    <!-- property main detail -->
+                    <div class="col-lg-8 col-md-12 col-sm-12">
+                        @foreach (var ch in list)
+                        {
+                            dynamic d = ch;
+                            var name = d.GetType().GetProperty("Name").GetValue(d, null);
+                            var address = d.GetType().GetProperty("Address").GetValue(d, null);
+                            var createDate = d.GetType().GetProperty("CreateDate").GetValue(d, null);
+                            var Content = d.GetType().GetProperty("Content").GetValue(d, null);
+                            var Description = d.GetType().GetProperty("Description").GetValue(d, null);
+                            <div class="property_info_detail_wrap mb-4">
+
+                                <div class="property_info_detail_wrap_first">
+                                    <div class="pr-price-into">
+                                        <ul class="prs_lists">
+                                            <li><span class="bed">3 Beds</span></li>
+                                            <li><span class="bath">2 Bath</span></li>
+                                            <li><span class="gar">1 Garage</span></li>
+                                            <li><span class="sqft">800 sqft</span></li>
+                                        </ul>
+                                        <h2>@name</h2>
+                                        <span><i class="lni-map-marker"></i> @address</span>
+                                        <span><i class="lni-map-marker"></i> @Html.FormatValue(createDate, "{0:dd/MM/yyyy}")</span>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="property_detail_section">
+                                    <div class="prt-sect-pric">
+                                        <ul class="_share_lists">
+                                            <li><a href="#"><i class="fa fa-bookmark"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-share"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- Single Block Wrap -->
+                            <div class="property_block_wrap">
+
+                                <div class="property_block_wrap_header">
+                                    <h4 class="property_block_title">Mô Tả</h4>
+                                </div>
+
+                                <div class="block-body">
+                                    <p>@Description</p>
+                                    <p>@Content</p>
+                                </div>
+
+                            </div>
+                        }
+
+
+                        <!-- Single Block Wrap -->
+                        <div class="property_block_wrap">
+
+                            <div class="property_block_wrap_header">
+                                <h4 class="property_block_title">Advance Features</h4>
+                            </div>
+
+                            <div class="block-body">
+                                <ul class="row p-0 m-0">
+                                    <li class="col-lg-4 col-md-6 mb-2 p-0"><i class="fa fa-bed mr-1"></i>4 Bedrooms</li>
+                                    <li class="col-lg-4 col-md-6 mb-2 p-0"><i class="fa fa-bath mr-1"></i>2 Bathrooms</li>
+                                    <li class="col-lg-4 col-md-6 mb-2 p-0"><i class="fa fa-expand-arrows-alt mr-1"></i>12400 sqft</li>
+                                    <li class="col-lg-4 col-md-6 mb-2 p-0"><i class="fa fa-house-damage mr-1"></i>1 Living Rooms</li>
+                                    <li class="col-lg-4 col-md-6 mb-2 p-0"><i class="fa fa-building mr-1"></i>Build 2007</li>
+                                    <li class="col-lg-4 col-md-6 mb-2 p-0"><i class="fa fa-utensils mr-1"></i>2 Kitchens </li>
+                                    <li class="col-lg-4 col-md-6 mb-2 p-0"><i class="fa fa-car mr-1"></i>Car Parking</li>
+                                    <li class="col-lg-4 col-md-6 mb-2 p-0"><i class="fa fa-briefcase-medical mr-1"></i>Free Medical</li>
+                                    <li class="col-lg-4 col-md-6 mb-2 p-0"><i class="fa fa-fire mr-1"></i>Fireplace</li>
+                                    <li class="col-lg-4 col-md-6 mb-2 p-0"><i class="fa fa-layer-group mr-1"></i>Residential</li>
+                                    <li class="col-lg-4 col-md-6 mb-2 p-0"><i class="fa fa-tv mr-1"></i>TV Cable</li>
+                                    <li class="col-lg-4 col-md-6 mb-2 p-0"><i class="fa fa-spa mr-1"></i>Free Spa</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                        <!-- Single Block Wrap -->
+                        <div class="property_block_wrap">
+
+                            <div class="property_block_wrap_header">
+                                <h4 class="property_block_title">Floor Plan</h4>
+                            </div>
+
+                            <div class="block-body">
+                                <div class="accordion" id="floor-option">
+                                    <div class="card">
+                                        <div class="card-header" id="groundFloor">
+                                            <h2 class="mb-0">
+                                                <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#groundfloor">Ground Floor</button>
+                                            </h2>
+                                            <div class="floor_listeo">
+                                                <ul>
+                                                    <li>Beds: 4</li>
+                                                    <li>Baths: 2</li>
+                                                    <li>Area: 1000 sqft</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div id="groundfloor" class="collapse show" aria-labelledby="groundFloor" data-parent="#floor-option">
+                                            <div class="card-body">
+                                                <img src="~/assets/img/floor.jpg" class="img-fluid" alt="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header" id="firstFloor">
+                                            <h2 class="mb-0">
+                                                <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#firstfloor">First Floor<span>710 sq ft</span></button>
+                                            </h2>
+                                            <div class="floor_listeo">
+                                                <ul>
+                                                    <li>Beds: 4</li>
+                                                    <li>Baths: 3</li>
+                                                    <li>Area: 1000 sqft</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div id="firstfloor" class="collapse" aria-labelledby="firstFloor" data-parent="#floor-option">
+                                            <div class="card-body">
+                                                <img src="~/assets/img/floor.jpg" class="img-fluid" alt="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header" id="seconfFloor">
+                                            <h2 class="mb-0">
+                                                <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#secondfloor">Second<span>520 sq ft</span></button>
+                                            </h2>
+                                            <div class="floor_listeo">
+                                                <ul>
+                                                    <li>Beds: 5</li>
+                                                    <li>Baths: 3</li>
+                                                    <li>Area: 1000 sqft</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div id="secondfloor" class="collapse" aria-labelledby="seconfFloor" data-parent="#floor-option">
+                                            <div class="card-body">
+                                                <img src="~/assets/img/floor.jpg" class="img-fluid" alt="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Single Block Wrap -->
+                        <div class="property_block_wrap">
+
+                            <div class="property_block_wrap_header">
+                                <h4 class="property_block_title">Location</h4>
+                            </div>
+
+                            <div class="block-body">
+                                <div class="map-container">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15090.183774083564!2d72.82822336977539!3d18.99565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7cef0d17ace6f%3A0xba0d758b25d8b289!2sICICI%20Bank%20Curry%20Road%2C%20Mumbai-Branch%20%26%20ATM!5e0!3m2!1sen!2sin!4v1624183548415!5m2!1sen!2sin" class="full-width" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Single Reviews Block -->
+                        <div class="property_block_wrap">
+
+                            <div class="property_block_wrap_header">
+                                <h4 class="property_block_title"> Người Đánh Giá </h4>
+                            </div>
+
+                            <div class="block-body">
+
+                                <div class="container">
+                                    <div class="row bootstrap snippets bootdeys">
+                                        <div class="col-sm-12">
+                                            <div class="comment-wrapper">
+                                                <div class="panel panel-info">
+                                                    <div class="panel-heading">
+                                                        Bình Luận Mới
+                                                    </div>
+                                                    <div class="panel-body">
+                                                        @using (Html.BeginForm("Messenger", "Home", FormMethod.Post))
+                                                        {
+                                                            <textarea class="form-control" name="content" placeholder="Viết Bình luận ngay..." rows="3"></textarea>
+                                                            <br>
+                                                            <button type="submit" class="btn btn-info pull-right">Gửi</button>
+                                                        }
+                                                        <div class="clearfix"></div>
+                                                        <hr>
+                                                        <ul class="media-list">
+                                                            @{ foreach (var item in commnet)
+                                                                {
+                                                                    dynamic d = item;
+                                                                    var name = d.GetType().GetProperty("CustomerName").GetValue(d, null);
+                                                                    var Username = d.GetType().GetProperty("UserName").GetValue(d, null);
+                                                                    var content = d.GetType().GetProperty("Content").GetValue(d, null);
+                                                                    var date = d.GetType().GetProperty("CreateDate").GetValue(d, null);
+                                                                    <li class="media">
+                                                                        <a href="#" class="pull-left">
+                                                                            <img src="https://bootdey.com/img/Content/user_1.jpg" alt="" class="img-circle">
+                                                                        </a>
+                                                                        <div class="media-body">
+                                                                            <span class="text-muted pull-right">
+                                                                                <small class="text-muted">@Html.FormatValue(date, "{0:MM/dd/yyyy H:mm}") </small>
+                                                                            </span>
+                                                                            <strong class="text-success">@name</strong>
+                                                                            <p>
+                                                                                @content <a href="#"> #Bình Luận </a>.
+                                                                            </p>
+                                                                        </div>
+                                                                    </li>
+                                                                }
+                                                            }
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            @if (ViewBag.value < 0)
+                                            {
+                                                <a href="#" class="reviews-checked"></a>
+                                            }
+                                            else
+                                            {
+                                                <a href="#" class="reviews-checked">
+                                                   Hơn @ViewBag.value người khác bình luận
+                                                </a>
+                                            }
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- property Sidebar -->
+                    <div class="col-lg-4 col-md-12 col-sm-12">
+                        <div class="property-sidebar">
+                            @foreach (var ch in list)
+                            {
+                                dynamic d = ch;
+                                var Price = d.GetType().GetProperty("Price").GetValue(d, null);
+                                var id = d.GetType().GetProperty("ID").GetValue(d, null);
+                                <div class="sider_blocks_wrap">
+                                    <div class="side-booking-header">
+                                        <div class="sb-header-left"><h3 class="price">@Html.FormatValue(Price, "{0:#,##0}")<sub>/Căn</sub></h3></div>
+
+                                    </div>
+                                    <div class="side-booking-body">
+                                        <div class="row">
+                                            <div class="side-booking-foot">
+                                                <span class="sb-header-left">Tổng Cộng</span>
+                                                <h3 class="price theme-cl">@Html.FormatValue(Price, "{0:#,##0}")</h3>
+                                            </div>
+
+                                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                                <div class="stbooking-footer mt-1">
+                                                    <div class="form-group mb-0 pb-0">
+                                                        <a href="@Url.Action("AddItem", "Cart", new { cartId = id, quantity = 1, id = Session[CommonStants.ID_Customer] })" class="btn book_btn theme-bg">Đặt Ngay</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+
+                            @foreach (var ch in user)
+                            {
+                                dynamic d = ch;
+                                var name = d.GetType().GetProperty("Name").GetValue(d, null);
+                                var mywork = d.GetType().GetProperty("MyWork").GetValue(d, null);
+                                var NumberPhone = d.GetType().GetProperty("NumberPhone").GetValue(d, null);
+                                var Email = d.GetType().GetProperty("Email").GetValue(d, null);
+                                <div class="sider_blocks_wrap">
+                                    <div class="side-booking-body">
+                                        <div class="agent-_blocks_title">
+
+                                            <div class="agent-_blocks_thumb"><img src="~/assets/img/user-6.jpg" alt=""></div>
+                                            <div class="agent-_blocks_caption">
+                                                <h4><a href="#">@name</a></h4>
+                                                <span class="approved-agent"><i class="ti-check"></i>@mywork</span>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+
+                                        <a href="#" class="agent-btn-contact" data-toggle="modal" data-target="#autho-message"><i class="ti-comment-alt"></i>@Email</a>
+
+                                        <span id="number" data-last="+84 @NumberPhone">
+                                            <span><i class="ti-headphone-alt"></i><a class="see">@NumberPhone</a></span>
+                                        </span>
+                                    </div>
+                                </div>
+                            }
+
+
+                            <div class="sidebar-widgets">
+
+                                <h4>Similar Property</h4>
+
+                                <div class="sidebar_featured_property">
+
+                                    @foreach (var ch in gerenal)
+                                    {
+                                        dynamic d = ch;
+                                        var name = d.GetType().GetProperty("Name").GetValue(d, null);
+                                        var address = d.GetType().GetProperty("Address").GetValue(d, null);
+                                        var Price = d.GetType().GetProperty("Price").GetValue(d, null);
+                                        var id = d.GetType().GetProperty("ID").GetValue(d, null);
+                                        var HomeFlag = d.GetType().GetProperty("HomeFlag").GetValue(d, null);
+                                        <div class="sides_list_property">
+                                            <div class="sides_list_property_thumb">
+                                                <img src="~/assets/img/p-1.png" class="img-fluid" alt="" />
+                                            </div>
+                                            <div class="sides_list_property_detail">
+                                                <h4><a href="/home/details/@id">@name</a></h4>
+                                                <span><i class="ti-location-pin"></i>@address</span>
+                                                <div class="lists_property_price">
+
+                                                    <div class="lists_property_price_value">
+                                                        <h4>@Html.FormatValue(Price, "{0:#,##0}") VNĐ</h4>
+                                                    </div>
+                                                    <div class="lists_property_types">
+                                                        @if (HomeFlag == true)
+                                                        {
+
+
+                                                            <div class="property_types_vlix sale"><span style="color:red">Bán</span></div>
+                                                        }
+                                                        else
+                                                        {
+                                                            <div class="property_types_vlix sale"><span style="color:red">Thuê</span></div>
+                                                        }
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    }
+
+
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- Send Message -->
+        <div class="modal fade" id="autho-message" tabindex="-1" role="dialog" aria-labelledby="authomessage" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered login-pop-form" role="document">
+                <div class="modal-content" id="authomessage">
+                    <span class="mod-close" data-dismiss="modal" aria-hidden="true"><i class="ti-close"></i></span>
+                    <div class="modal-body">
+                        <h4 class="modal-header-title">Drop Message</h4>
+                        <div class="login-form">
+                            <form>
+
+                                <div class="form-group">
+                                    <label>Subject</label>
+                                    <div class="input-with-icons">
+                                        <input type="text" class="form-control" placeholder="Message Title">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Messages</label>
+                                    <div class="input-with-icons">
+                                        <textarea class="form-control ht-80"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-md full-width pop-login">Send Message</button>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Modal -->
+    </div>
+</body>
+</html>
+

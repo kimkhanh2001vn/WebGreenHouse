@@ -1,0 +1,173 @@
+﻿@using WebGreenhouse.Models
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var listcart = (List<CartItem>)ViewBag.list;
+    var info = ViewBag.customer;
+}
+@section Styles{
+    <link href="~/assets/css/Cart.css" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+}
+@section Scripts{
+    <script src="~/Areas/Admin/Resources/assets/js/Controller/CartController.js"></script>
+    <script>
+        $('#sendinfo').on('click', function () {
+            $('#info').modal();
+        });
+    </script>
+}
+<html>
+<body>
+    <div class="page-title" style="background:#f4f4f4 url(assets/img/slider-3.jpg);" data-overlay="5">
+        <div class="ht-80"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+                    <div class="_page_tetio">
+                        <div class="pledtio_wrap"><span>Giỏ Hàng</span></div>
+                        <h2 class="text-light mb-0">Get Helps & Friendly Support</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ht-120"></div>
+    </div>
+    <div class="container padding-bottom-3x mb-1">
+        <!-- Alert-->
+
+        @if (ViewBag.err1 != null)
+        {
+            <div class="alert alert-info alert-dismissible fade show text-center" id="err1" style="margin-bottom: 30px;">
+                <span class="alert-close" data-dismiss="alert"></span>
+                &nbsp;&nbsp;@ViewBag.err1 <strong><i class="fa fa-times"></i></strong>.
+            </div>
+        }
+
+        @if (ViewBag.success != null)
+        {
+            <div class="alert alert-info alert-dismissible fade show text-center" id="err1" style="margin-bottom: 30px;">
+                <span class="alert-close" data-dismiss="alert"></span>
+                &nbsp;&nbsp;@ViewBag.success <strong><i class="fa fa-check-circle"></i></strong>.
+            </div>
+        }
+        <!-- Shopping Cart-->
+
+        @if (listcart.Count > 0)
+        {
+            <div class="table-responsive shopping-cart">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Tên Căn Hộ</th>
+                            <th class="text-center">Số Lượng</th>
+                            <th class="text-center">Subtotal</th>
+                            <th class="text-center">Discount</th>
+                            <th class="text-center"><a class="btn btn-sm btn-outline-danger" href="#" id="btnRemoveAll">Clear Cart</a></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in listcart)
+                        {
+                            <tr>
+                                <td>
+                                    <div class="product-item">
+                                        <a class="product-thumb" href="#"><img src="https://via.placeholder.com/220x180/FF0000/000000" alt="Product"></a>
+                                        <div class="product-info">
+                                            <h4 class="product-title"><a href="#">@item.post.Name</a></h4><span><em></em></span><span><em></em></span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-center"></td>
+                                <td class="text-center text-lg text-medium">@item.post.Price</td>
+                                <td class="text-center text-lg text-medium">$18.00</td>
+                                <td class="text-center"><a class="btn-delete remove-from-cart" data-id="@item.post.ID" href="#"><i class="fa fa-trash"></i></a></td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+            <div class="shopping-cart-footer">
+                <div class="column"><a class="btn btn-outline-secondary" href="/home/sells"><i class="icon-arrow-left"></i>&nbsp;Back to Shopping</a></div>
+                <div class="column">
+                    <a class="btn btn-primary" href="#" data-toast="" data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Your cart" data-toast-message="is updated successfully!">Cập Nhật Giỏ Hàng</a>
+                    <a class="btn btn-success" href="#" id="sendinfo">Gửi Thông Tin</a>
+                </div>
+            </div>
+        }
+        else
+        {
+            <span class="alert alert-danger">Chưa Có Sản Phảm Nào Trong Giỏ Hàng</span>
+            <div class="shopping-cart-footer">
+                <div class="column"><a class="btn btn-outline-secondary" href="/home/sells"><i class="icon-arrow-left"></i>&nbsp;Back to Shopping</a></div>
+            </div>
+        }
+
+    </div>
+    <div class="modal fade" id="info" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-xl login-pop-form" role="document">
+            <div class="modal-content overli" id="registermodal">
+                <div class="modal-body p-0">
+                    <div class="resp_log_wrap">
+                        <div class="resp_log_caption">
+                            <span class="mod-close" data-dismiss="modal" aria-hidden="true"><i class="ti-close"></i></span>
+                            <div class="edlio_152">
+                                <ul class="nav nav-pills tabs_system center" id="pills-tab" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" id="pills-login-tab" data-toggle="pill" href="#pills-login" role="tab" aria-controls="pills-login" aria-selected="true"><i class="fas fa-user-astronaut mr-2"></i>Thông Tin Liên Hệ</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="tab-content" id="pills-tabContent">
+                                <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="pills-login-tab">
+                                    <div class="login-form">
+                                        @using (Html.BeginForm("Payment", "Cart", FormMethod.Post))
+                                        {
+                                            foreach (var item in info)
+                                            {
+                                                <div class="form-group">
+                                                    <label>Họ Và Tên</label>
+                                                    <div class="input-with-icon">
+                                                        <input type="text" class="form-control" name="name" value="@item.CustomerName" placeholder="Điền họ và tên..." required>
+                                                        <i class="ti-user"></i>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label>Địa Chỉ</label>
+                                                    <div class="input-with-icon">
+                                                        <input type="text" class="form-control" name="address" value="@item.CustomerAddress" placeholder="Điền địa chỉ..." required>
+                                                        <i class="fa fa-map-pin"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Email</label>
+                                                    <div class="input-with-icon">
+                                                        <input type="email" class="form-control" name="email" value="@item.CustomerEmail" placeholder="Điền email của bạn..." required>
+                                                        <i class="fa fa-envelope"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Số Điện Thoại</label>
+                                                    <div class="input-with-icon">
+                                                        <input type="number" class="form-control" name="numberphone" value="@item.NumberPhone" placeholder="Điền số điện thoại..." required>
+                                                        <i class="fa fa-tablet"></i>
+                                                    </div>
+                                                </div>
+
+                                            }
+                                            <div class="form-group">
+                                                <button type="submit" class="btn btn-md full-width pop-login">Gửi</button>
+                                            </div>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
